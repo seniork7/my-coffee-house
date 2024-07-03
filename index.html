@@ -3,15 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Site title -->
     <title>My Coffee House</title>
+
+<!-- Linking the CSS file -->
+    <link rel="stylesheet" href="css/styles.css">
+
 </head>
+
 <body>
 <!-- *  * * * * * * * * * * * * * * * * * * * * * * * * * *
     *                                                 *
-    *                 Add Skip Links                  *
+    *                   Skip Links                    *
     *              --------------------               *
     *                                                 * 
     * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+    <ul class="skip-links">
+        <li><a href="#main-nav">Go to main navigation</a></li>
+        <li><a href="#main-section">Go to main section</a></li>
+    </ul>
+
 
 
 <!-- *  * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -21,8 +32,8 @@
     *                                                 * 
     * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
     <header>
-        <nav>
-            <a href="index.html"><img src="images/my-coffee-shop-logo.svg" alt=""></a>
+        <nav id="main-nav">
+            <a href="index.html"><img src="images/my-coffee-shop-logo.svg" alt="This is the coffee shop logo"></a>
 
             <ul>
                 <li><a href="#">About Us</a></li>
@@ -47,18 +58,18 @@
     *           ---------------------------           *
     *                                                 * 
     * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-    <main>
+    <main id="main-section">
         <section id="welcome">
             <p>Welcome to My Coffee House</p>
             <h3>EXPERIENCE A NEW WAY TO TASTE COFFEE</h3>
 
             <div class="coffee">
                 <!-- Use grid-area to arrange these images -->
-                <img src="images/latte.jpeg" alt="">
-                <img src="images/coffee-beans.jpeg" alt="">
-                <img src="images/pouring-coffee.jpeg" alt="">
-                <img src="images/three-cups.jpeg" alt="">
-                <img src="images/smiling-employee.jpeg" alt="">
+                <img src="images/latte.jpeg" alt="An image showing latte being made">
+                <img src="images/coffee-beans.jpeg" alt="An image showing coffee beans in a glass container">
+                <img src="images/pouring-coffee.jpeg" alt="Black coffee being poured into a glass jar">
+                <img src="images/three-cups.jpeg" alt="This image shows individuals holding two cups of latte and one cup of coffee beans">
+                <img src="images/smiling-employee.jpeg" alt="This image shows an employee smiling while carrying out her job">
             </div>
         </section>
 
@@ -68,20 +79,20 @@
 
             <div class="offers">
                 <div class="special-offers">
-                    <img src="images/fair-trade.svg" alt="">
+                    <img src="images/fair-trade.svg" alt="This is an image of the fair trade symbol">
                     <h3>Fair Trade Coffee</h3>
                     <p>We build direct relationships with the farmers and producers who help in the development of delicious, sustainable and organic coffee.
                     </p>
                 </div>
 
                 <div class="special-offer">
-                    <img src="images/local-baked-goods.svg" alt="">
+                    <img src="images/local-baked-goods.svg" alt="This is an image of the baked goods symbol">
                     <h3>Local baked goods</h3>
                     <p>We use local products to bake our goods and bring in a variety of treats from local bakers with our community</p>
                 </div>
 
                 <div class="special-offer">
-                    <img src="images/made-with-love.svg" alt="">
+                    <img src="images/made-with-love.svg" alt="This is an image of the made with love symbol">
                     <h3>Made with love</h3>
                     <p>We value our customers and make it our priority to serve everyone with respect and a friendly smile to start their day of right.</p>
                 </div>
@@ -103,7 +114,7 @@
         </section>
 
         <section id="about">
-            <img src="images/about-us.jpeg" alt="">
+            <img src="images/about-us.jpeg" alt="This image shows an employee getting ready to pour coffee from the coffee machine">
 
             <p>About Us</p>
             <h3>Read our story</h3>
@@ -121,27 +132,35 @@
             <h3>What our customers say about us</h3>
 
             <div>
-                <img src="images/testimonial-1.jpeg" alt="">
+                <img src="images/testimonial-1.jpeg" alt="This image shows a lady enjoying her coffee">
                 <p>"I always make a point to visit My Coffee Company when in Ottawa. Delicious coffee and friendly service."</p>
                 <p>Jane D., Toronto</p>
             </div>
 
             <div>
-                <img src="images/testimonial-2.jpeg" alt="">
+                <img src="images/testimonial-2.jpeg" alt="This image shows a guy smiling with his coffee next to his computer">
                 <p>"Great atmosphere to get some work done while enjoying a cup or two of incredible coffee."</p>
                 <p>Scott S., Ottawa</p>
             </div>
 
             <div>
-                <img src="images/testimonial-3.jpeg" alt="">
+                <img src="images/testimonial-3.jpeg" alt="This image shows a customer enjoying her coffee while working on her computer">
                 <p>"Best coffee in Ottawa and the service is top notch. Would highly recommend a visit."</p>
                 <p>Susie F., Ottawa </p>
             </div>
         </section>
     </main>
 
+
+<!-- *  * * * * * * * * * * * * * * * * * * * * * * * * * *
+    *                                                 *
+    *             Structuring the Footer              *
+    *           ---------------------------           *
+    *                                                 * 
+    * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
     <footer>
         <p>&copy; My Coffee Company 2024</p>
     </footer>
+
 </body>
 </html>
