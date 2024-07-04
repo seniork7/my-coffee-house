@@ -6,7 +6,7 @@
 <!-- Site title -->
     <title>My Coffee House</title>
 
-<!-- Linking the CSS file -->
+<!-- Link CSS file -->
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
@@ -14,15 +14,14 @@
 <body>
 <!-- *  * * * * * * * * * * * * * * * * * * * * * * * * * *
     *                                                 *
-    *                   Skip Links                    *
-    *              --------------------               *
+    *       Skip Links Added for Accessibility        *
+    *       -----------------------------------       *
     *                                                 * 
     * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-    <ul class="skip-links">
+    <ul id="skip-links">
         <li><a href="#main-nav">Go to main navigation</a></li>
         <li><a href="#main-section">Go to main section</a></li>
     </ul>
-
 
 
 <!-- *  * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -35,22 +34,26 @@
         <nav id="main-nav">
             <a href="index.html"><img src="images/my-coffee-shop-logo.svg" alt="This is the coffee shop logo"></a>
 
+<!-- Main nav list -->
             <ul>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Menu</a></li>
                 <li><a href="#">Locations</a></li>
             </ul>
+        </nav>
 
+<!-- Structuring the "hero" banner (image is added as a background image) -->
             <div id="banner">
                 <!-- Add hero image as background image -->
-                <h1>Experience coffee like never before</h1>
+                <h1 class="hero">Experience coffee like never before</h1>
 
-                <p>We craft more than beverages; we curate memories, one flavorful moment at a time. Embrace the aroma and let every visit be a chapter in your coffee story.</p>
+                <p class="hero">We craft more than beverages; we curate memories, one flavorful moment at a time. Embrace the aroma and let every visit be a chapter in your coffee story.</p>
 
-                <button>Explore our menu</button>
-            </div>
-        </nav>
+                <button class="hero explore">Explore our menu</button>
+            </div> 
+
     </header>
+
 
 <!-- *  * * * * * * * * * * * * * * * * * * * * * * * * * *
     *                                                 *
@@ -59,23 +62,26 @@
     *                                                 * 
     * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
     <main id="main-section">
-        <section id="welcome">
-            <p>Welcome to My Coffee House</p>
-            <h3>EXPERIENCE A NEW WAY TO TASTE COFFEE</h3>
+        
+<!-- Welcome Section -->
+        <section class="container welcome">
+            <p class="main-text">Welcome to My Coffee House</p>
+            <h2>EXPERIENCE A NEW WAY TO TASTE COFFEE</h2>
 
             <div class="coffee">
                 <!-- Use grid-area to arrange these images -->
-                <img src="images/latte.jpeg" alt="An image showing latte being made">
-                <img src="images/coffee-beans.jpeg" alt="An image showing coffee beans in a glass container">
-                <img src="images/pouring-coffee.jpeg" alt="Black coffee being poured into a glass jar">
-                <img src="images/three-cups.jpeg" alt="This image shows individuals holding two cups of latte and one cup of coffee beans">
-                <img src="images/smiling-employee.jpeg" alt="This image shows an employee smiling while carrying out her job">
+                <img class="latte" src="images/latte.jpeg" alt="An image showing latte being made">
+                <img class="coffee-beans" src="images/coffee-beans.jpeg" alt="An image showing coffee beans in a glass container">
+                <img class="pouring-coffee" src="images/pouring-coffee.jpeg" alt="Black coffee being poured into a glass jar">
+                <img class="three-cups" src="images/three-cups.jpeg" alt="This image shows individuals holding two cups of latte and one cup of coffee beans">
+                <img class="smiling-employee" src="images/smiling-employee.jpeg" alt="This image shows an employee smiling while carrying out her job">
             </div>
         </section>
 
-        <section id="our-offers">
-            <p>What we Offer</p>
-            <h3>Why visit us?</h3>
+<!-- Offers Section -->
+        <section class="container">
+            <p class="main-text">What we Offer</p>
+            <h2>Why visit us?</h2>
 
             <div class="offers">
                 <div class="special-offers">
@@ -99,25 +105,28 @@
             </div>
         </section>
 
-        <section id="shop-links">
+<!-- Shop Links Section -->
+        <section class="container">
+            <!-- This did might not be needed!!! -->
             <div>
-                <p>Our Menu</p>
-                <h3>Explore what we have to offer you</h3>
-                <button>Explore our menu</button>
+                <p class="main-text">Our Menu</p>
+                <h2>Explore what we have to offer you</h2>
+                <button class="explore">Explore our menu</button>
             </div>
 
             <div>
-                <p>Locations</p>
-                <h3>Find your nearest coffee shop</h3>
+                <p class="main-text">Locations</p>
+                <h2>Find your nearest coffee shop</h2>
                 <button>View Locations</button>
             </div>
         </section>
 
-        <section id="about">
+<!-- About Us Section -->
+        <section class="container">
             <img src="images/about-us.jpeg" alt="This image shows an employee getting ready to pour coffee from the coffee machine">
 
-            <p>About Us</p>
-            <h3>Read our story</h3>
+            <p class="main-text">About Us</p>
+            <h2>Read our story</h2>
 
             <p>In the heart of our community, My Coffee House emerged as a humble local coffee shop that sought to redefine the coffee experience. Founded with a passion for quality brews and a commitment to fostering genuine connections, we embarked on this journey with a vision to create a warm and inviting space for coffee enthusiasts and casual patrons alike.</p>
 
@@ -126,28 +135,43 @@
 
             <button>Learn more</button>
         </section>
-
-        <section id="testimonial">
-            <p>Testimonials</p>
-            <h3>What our customers say about us</h3>
+        
+<!-- Testimonial Section -->
+        <section class="container">
+            <p class="main-text">Testimonials</p>
+            <h2>What our customers say about us</h2>
 
             <div>
                 <img src="images/testimonial-1.jpeg" alt="This image shows a lady enjoying her coffee">
-                <p>"I always make a point to visit My Coffee Company when in Ottawa. Delicious coffee and friendly service."</p>
-                <p>Jane D., Toronto</p>
+                <blockquote>
+                    "I always make a point to visit My Coffee Company when in Ottawa. Delicious coffee and friendly service."
+                </blockquote>
+                <p class="main-text">
+                    Jane D., Toronto
+                </p>
             </div>
 
             <div>
                 <img src="images/testimonial-2.jpeg" alt="This image shows a guy smiling with his coffee next to his computer">
-                <p>"Great atmosphere to get some work done while enjoying a cup or two of incredible coffee."</p>
-                <p>Scott S., Ottawa</p>
+                <blockquote>
+                    "Great atmosphere to get some work done while enjoying a cup or two of incredible coffee."
+                </blockquote>
+                <p class="main-text">
+                    Scott S., Ottawa
+                </p>
             </div>
 
             <div>
                 <img src="images/testimonial-3.jpeg" alt="This image shows a customer enjoying her coffee while working on her computer">
-                <p>"Best coffee in Ottawa and the service is top notch. Would highly recommend a visit."</p>
-                <p>Susie F., Ottawa </p>
+
+                <blockquote>
+                    "Best coffee in Ottawa and the service is top notch. Would highly recommend a visit."
+                </blockquote>
+                <p class="main-text">
+                    Susie F., Ottawa 
+                </p>
             </div>
+            
         </section>
     </main>
 

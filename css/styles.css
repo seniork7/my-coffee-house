@@ -1,0 +1,197 @@
+/* Importing Lato font*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Importing Karla font */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Use universal selector to target and add styles to repeated tags */
+* ul,
+li,
+a {
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/* Change the background color of the body and reset the margin of the body to 0 */
+body {
+    background-color: #f3f0e9;
+    margin: 0;
+}
+
+/* Specify the width for the container/wrapper */
+.container {
+    max-width: 1200px;
+    padding: 0 10px;
+}
+
+/* Specify the width for all images */
+* img {
+    width: 100%;
+}
+
+/* Apply Lato font to the headings and navigation links*/
+h1,
+h2,
+h3,
+#skip-links,
+#main-nav ul a {
+    font-family: 'lato', sans-serif;
+    text-transform: uppercase;
+}
+
+/* Change font size for all headings and paragraphs */
+h1 {
+    font-size: 2.027rem;
+}
+
+h2 {
+    font-size: 1.802rem;
+}
+
+h3 {
+    font-size: 1.424rem;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* Apply Karla font to all paragraphs,blockquotes, and buttons */
+p,
+blockquote,
+button {
+    font-family: 'karla', sans-serif;
+}
+
+/* Change styles for skip links*/
+#skip-links {
+    margin: 0;
+    padding: 0;
+}
+
+/* Use absolute to alter the position of the skip links */
+#skip-links a{
+    position: absolute;
+    top: -50px;
+    padding: 5px;
+    color: white;
+}
+
+/* Reset the postion of the skip links when they are in focus and change the background color */
+#skip-links a:focus{
+    top: 0;
+    background-color: rgb(214, 158, 61);
+}
+
+/* Add a grid layout to the main nav */
+#main-nav {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    background-color: rgb(0, 0, 0);
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    padding: 10px 0;
+}
+
+/* Add a flexbox layout to main nav container */
+#main-nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Add styles to main nav links */
+#main-nav ul a {
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: 800;
+    padding: 10px 20px;
+}
+
+/* Change background color and adjust the border-radius for the main nav links when hover */
+#main-nav ul a:hover {
+    background-color: rgb(214, 158, 61);
+    border-radius: 30px 0;
+}
+
+/* Change background color and adjust the border-radius for the main nav links when in focus */
+#main-nav ul a:focus {
+    background-color: rgb(150, 111, 44);
+    border-radius: 30px 0;
+}
+
+/* Adjust the size of the logo */
+#main-nav img {
+    width: 200px;
+}
+
+/* Use flexbox to align the information in the banner section */
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+/* Use a background image and add an overlay by using a linear gradient and alter the alpha channel to change the overlay's opacity */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.75)), url("../images/hero-background.jpg");
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    padding: 40px 20px;
+}
+
+/* Stlyle the elements of the hero banner */
+.hero {
+    align-self: center;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Add styles to the explore button */
+.explore {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 12px;
+    padding: 7px 40px;
+}
+
+/* Style the main paragraph text */
+.main-text {
+    color: rgb(214, 158, 61);
+    text-transform: uppercase;
+    margin: 50px 0 -20px 0;
+}
+
+/* Add a grid layout and create grid area template */
+.coffee {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 15px;
+    grid-template-areas: 
+    'one one'
+    'one one'
+    'two three'
+    'four five';
+}
+
+/* Assign images to their required area in the grid */
+.latte {
+    grid-area: one;
+}
+
+.coffee-beans {
+    grid-area: two;
+}
+
+.pouring-coffee {
+    grid-area: three;
+}
+
+.three-cups {
+    grid-area: four;
+}
+
+.smiling-employee {
+    grid-area: five;
+}
