@@ -4,7 +4,7 @@
 /* Importing Karla font */
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-/* Use universal selector to target and add styles to repeated tags */
+/* Use universal selector to target and add styles to repeated tags with common styles */
 * ul,
 li,
 a {
@@ -17,6 +17,16 @@ a {
 body {
     background-color: #f3f0e9;
     margin: 0;
+}
+
+/* Add style to center align text */
+.center-align {
+    text-align: center;
+}
+
+ /* Adjust bottom margin for some h2 elements */
+.welcome {
+    margin-bottom: 50px;
 }
 
 /* Specify the width for the container/wrapper */
@@ -130,7 +140,6 @@ button {
 #banner {
     display: flex;
     flex-direction: column;
-    justify-content: center;
 
 /* Use a background image and add an overlay by using a linear gradient and alter the alpha channel to change the overlay's opacity */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.75)), url("../images/hero-background.jpg");
@@ -140,10 +149,9 @@ button {
     padding: 40px 20px;
 }
 
-/* Stlyle the elements of the hero banner */
+/* Align the elements of the hero banner */
 .hero {
     align-self: center;
-    text-align: center;
     margin: 10px 0;
 }
 
@@ -152,7 +160,7 @@ button {
     text-transform: uppercase;
     font-weight: 800;
     font-size: 12px;
-    padding: 7px 40px;
+    padding: 7px 20px;
 }
 
 /* Style the main paragraph text */
@@ -167,7 +175,7 @@ button {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    gap: 15px;
+    gap: 12px;
     grid-template-areas: 
     'one one'
     'one one'
@@ -194,4 +202,57 @@ button {
 
 .smiling-employee {
     grid-area: five;
+}
+
+
+.special-offer {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   align-items: center;
+}
+
+.special-offer img {
+    width: 120px;
+}
+
+.special-offer p {
+    margin: 0 0 70px;
+}
+
+.special-offer h3 {
+    margin: 15px 0 10px;
+}
+
+.store {
+    display: flex;
+    flex-direction: column;
+
+/* Use a background image and add an overlay by using a linear gradient and alter the alpha channel to change the overlay's opacity */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.75)), url("../images/coffee-shop.jpeg");
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    padding: 40px 20px;
+}
+
+.store-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.location {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 12px;
+    padding: 7px 20px;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.about-us {
+    margin: 70px 0;
 }
