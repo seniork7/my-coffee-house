@@ -204,7 +204,6 @@ button {
     grid-area: five;
 }
 
-
 .special-offer {
    display: flex;
    flex-direction: column;
@@ -256,3 +255,77 @@ button {
 .about-us {
     margin: 70px 0;
 }
+
+.about-btn {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    padding: 7px 20px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+.testimonials {
+    background-color: rgb(0, 0, 0);
+    padding: 20px 10px;
+}
+
+.testimonials h2,
+blockquote {
+    color: rgb(255, 255, 255);
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 15px;
+
+}
+
+.first {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url("../images/testimonial-1.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+.second {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.75)), url("../images/testimonial-2.jpeg");
+    background-size: cover;
+    background-position: top;
+    height: 300px;
+}
+
+.third {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75)), url("../images/testimonial-3.jpeg");
+    background-size: cover;
+    background-position: top;
+    height: 300px;
+}
+
+.reviews p {
+    color: rgb(214, 158, 61);
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+.reviews blockquote {
+    margin: auto 0 0;
+    padding-left: 20px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-bottom: 30px;
+    margin-top: -20px;
+}
+
+hr {
+    margin-top: 50px;
+}
+
+/* focus on using only flexbox on mobile layout */
+/* Find out why background images auto resized when the size of the viewport changes */
