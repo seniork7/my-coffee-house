@@ -155,13 +155,30 @@ button {
     margin: 10px 0;
 }
 
-/* Add styles to the explore button */
+/* Add styles to the explore button along with an animation effect */
 .explore {
     text-transform: uppercase;
     font-weight: 800;
     font-size: 12px;
     padding: 7px 20px;
+    transition: transform;
+    transition-duration: 0.5s;
 }
+
+.explore:hover {
+    background-color: rgb(214, 158, 61);
+    color: white;
+    border: 1px solid white;
+    transform: scale(0.9);
+}
+
+.explore:focus {
+    background-color: rgb(214, 158, 61);
+    color: white;
+    border: 1px solid white;
+    transform: scale(0.9);
+}
+
 
 /* Style the main paragraph text */
 .main-text {
@@ -327,5 +344,67 @@ hr {
     margin-top: 50px;
 }
 
-/* focus on using only flexbox on mobile layout */
-/* Find out why background images auto resized when the size of the viewport changes */
+
+/* *  * * * * * * * * * * * * * * * * * * * * * * * * * *
+    *                                                 *
+    *             Add an media query of 768px          *
+    *           -------------------------------       *
+    *                                                 * 
+    * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+@media screen and (min-width: 768px) {
+    /* Add a grid layout and create grid area template */
+.coffee {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 12px;
+    grid-template-areas: 
+    'one one two three'
+    'one one four five';
+}
+
+/* Assign images to their required area in the grid */
+.latte {
+    grid-area: one;
+}
+
+.coffee-beans {
+    grid-area: two;
+}
+
+.pouring-coffee {
+    grid-area: three;
+}
+
+.three-cups {
+    grid-area: four;
+}
+.smiling-employee {
+    grid-area: five;
+}
+
+.offers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    'fair fair local'
+    'made made made';
+}
+
+.fair-trade {
+    grid-area: fair;
+}
+
+.lacal-baked {
+    grid-area: local;
+}
+
+.made-with-love {
+    grid-area: made;
+}
+
+
+}
