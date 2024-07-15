@@ -32,6 +32,7 @@ body {
 /* Specify the width for the container/wrapper */
 .container {
     max-width: 1200px;
+    margin: 0 auto;
     padding: 0 10px;
 }
 
@@ -94,14 +95,13 @@ button {
     background-color: rgb(214, 158, 61);
 }
 
-/* Add a grid layout to the main nav */
+/* Add a flexbox layout to the main nav */
 #main-nav {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    justify-items: center;
+    background-color: rgb(0, 0, 0);
     padding: 10px 0;
 }
 
@@ -117,12 +117,16 @@ button {
     font-size: 12px;
     font-weight: 800;
     padding: 10px 20px;
+    border: none;
+    transition: all ease-in-out 0.4s;
 }
 
 /* Change background color and adjust the border-radius for the main nav links when hover */
 #main-nav ul a:hover {
     background-color: rgb(214, 158, 61);
+    border: 1px solid white;
     border-radius: 30px 0;
+    transform: scale(0.8);
 }
 
 /* Change background color and adjust the border-radius for the main nav links when in focus */
@@ -142,16 +146,18 @@ button {
     flex-direction: column;
 
 /* Use a background image and add an overlay by using a linear gradient and alter the alpha channel to change the overlay's opacity */
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.75)), url("../images/hero-background.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url("../images/hero-background.jpg");
     background-size: cover;
     background-position: center;
     color: rgb(255, 255, 255);
-    padding: 40px 20px;
+    padding: 0 20px;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
 }
 
-/* Align the elements of the hero banner */
+/* Add top and bottom margin for elements of the hero banner */
 .hero {
-    align-self: center;
     margin: 10px 0;
 }
 
@@ -160,22 +166,24 @@ button {
     text-transform: uppercase;
     font-weight: 800;
     font-size: 12px;
-    padding: 7px 20px;
-    transition: transform;
-    transition-duration: 0.5s;
+    padding: 9px 20px;
+    border: none;
+    transition: all ease-in-out 0.4s;
 }
 
 .explore:hover {
     background-color: rgb(214, 158, 61);
     color: white;
     border: 1px solid white;
+    border-radius: 100px;
     transform: scale(0.9);
 }
 
 .explore:focus {
-    background-color: rgb(214, 158, 61);
+    background-color: rgb( 150, 111, 44);
     color: white;
     border: 1px solid white;
+    border-radius: 100px;       
     transform: scale(0.9);
 }
 
@@ -187,7 +195,7 @@ button {
     margin: 50px 0 -20px 0;
 }
 
-/* Add a grid layout and create grid area template */
+/* Add a grid layout and create grid area template to arrange coffee images in the welcome*/
 .coffee {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -221,17 +229,21 @@ button {
     grid-area: five;
 }
 
+/* Apply a flexbox layout for the secial-offer section */
 .special-offer {
    display: flex;
    flex-direction: column;
    text-align: center;
+   justify-content: center;
    align-items: center;
 }
 
+/* Change the size of the image according to the mockup */
 .special-offer img {
     width: 120px;
 }
 
+/* Create space  */
 .special-offer p {
     margin: 0 0 70px;
 }
@@ -259,6 +271,14 @@ button {
     margin: 50px 0;
 }
 
+.store-info p {
+    color: rgb(214, 158, 61);
+}
+
+.store-info h2 {
+    margin: 0 0 30px;
+}
+
 .location {
     text-transform: uppercase;
     font-weight: 800;
@@ -267,6 +287,13 @@ button {
     background-color: transparent;
     color: rgb(255, 255, 255);
     border: 1px solid rgb(255, 255, 255);
+    transition: all ease-in-out 0.4s;
+}
+
+.location:hover {
+    border: 1px solid rgb(214, 158, 61);
+    border-radius: 100px;
+    transform: scale(0.9);
 }
 
 .about-us {
@@ -297,7 +324,6 @@ blockquote {
     display: flex;
     flex-direction: column;
     margin: 0 0 15px;
-
 }
 
 .first {
@@ -345,15 +371,34 @@ hr {
 }
 
 
-/* *  * * * * * * * * * * * * * * * * * * * * * * * * * *
-    *                                                 *
-    *             Add an media query of 768px          *
-    *           -------------------------------       *
-    *                                                 * 
-    * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* *  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+    *                                                                            *
+    *     Add a min-width media query for screen size of 768px and above         *
+    *   ------------------------------------------------------------------       *
+    *                                                                            * 
+    * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 
 @media screen and (min-width: 768px) {
+
+/* Change font size for all headings */
+h1 {
+    font-size: 2.986rem;
+}
+
+h2 {
+    font-size: 2.488rem;
+}
+
+h3 {
+    font-size: 1.728rem;
+}
+    
+/* Change the height of the banner */
+#banner {
+    height: 490px;
+}
+
     /* Add a grid layout and create grid area template */
 .coffee {
     display: grid;
@@ -389,22 +434,137 @@ hr {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: 
-    'fair fair local'
-    'made made made';
 }
 
 .fair-trade {
-    grid-area: fair;
+    grid-column: 1/2;
 }
 
 .lacal-baked {
-    grid-area: local;
+    grid-column: 3/4;
 }
 
 .made-with-love {
-    grid-area: made;
+    grid-column: 2/3;
+    grid-row: 2/2;
 }
 
+.store {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
+.store-info {
+    margin: 30px;
+}
+
+.store-info h2 {
+    margin-bottom: 50px;
+}
+
+.about-us {
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   align-items: center;
+   justify-content: center;
+   gap: 15px;
+}
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: start;
+}
+
+.p-text{
+    color: rgb(214, 158, 61);
+    margin: 0;
+}
+
+.about-info h2 {
+    margin: 5px 0;
+}
+
+.about-btn {
+    margin-top: 20px;
+}
+
+.service-reviews {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+}
+}
+
+/* *  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+    *                                                                            *
+    *     Add a min-width media query for screen size of 1100px and above        *
+    *   ------------------------------------------------------------------       *
+    *                                                                            * 
+    * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+@media screen and (min-width: 1100px) {
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* Change font size for all headings */
+h1 {
+    font-size: 3.815rem;
+}
+
+h2 {
+    font-size: 3.052rem;
+}
+
+h3 {
+    font-size: 1.953rem;
+}
+    
+/* Change the height of the banner */
+#banner {
+    height: 700px;
+}
+
+.offers {
+    display: flex;
+    align-items: center;
+}
+
+.about-us {
+   margin: 120px auto;
+}
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: start;
+}
+
+.p-text{
+    color: rgb(214, 158, 61);
+    margin: 0;
+}
+
+.about-info h2 {
+    margin: 5px 0;
+}
+
+.about-btn {
+    margin-top: 20px;
+}
+
+.service-reviews {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    
+}
 }
