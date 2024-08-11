@@ -31,9 +31,8 @@ body {
 
 /* Specify the width for the container/wrapper */
 .container {
-    max-width: 1200px;
+    width: 350px;
     margin: 0 auto;
-    padding: 0 10px;
 }
 
 /* Specify the width for all images */
@@ -96,47 +95,135 @@ button {
 }
 
 /* Add a flexbox layout to the main nav */
-#main-nav {
+header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: rgb(0, 0, 0);
-    padding: 10px 0;
+    padding: 10px 0 0;
 }
+
+/* nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }  */
 
 /* Add a flexbox layout to main nav container */
-#main-nav ul {
+/* nav > ul {
     display: flex;
-    justify-content: space-between;
-}
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  } */
 
 /* Add styles to main nav links */
-#main-nav ul a {
-    color: rgb(255, 255, 255);
-    font-size: 12px;
+.nav-item a {
+    color: #f3f0e9;
+    font-size: 14px;
     font-weight: 800;
-    padding: 10px 20px;
+    font-family: Arial, Helvetica, sans-serif;
     border: none;
-    transition: all ease-in-out 0.4s;
+    margin: 0.2rem;
+    width: fit-content;
+    padding: 5px 15px;
+    transition: all ease-in-out 0.5s;
 }
 
 /* Change background color and adjust the border-radius for the main nav links when hover */
-#main-nav ul a:hover {
-    background-color: rgb(214, 158, 61);
-    border: 1px solid white;
-    border-radius: 30px 0;
-    transform: scale(0.8);
+.nav-item a:hover {
+    color: rgb(214, 158, 61);
+    transform: scale(0.9);
 }
 
 /* Change background color and adjust the border-radius for the main nav links when in focus */
-#main-nav ul a:focus {
+nav > ul > a:focus {
     background-color: rgb(150, 111, 44);
     border-radius: 30px 0;
 }
 
+/* Change color for the navbar toggler icon */
+/* .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28214, 158, 61, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler {
+    border: 1px solid #d69e3d;
+} */
+
+/* ************************* Navbar Toggler Animation Start **************************************** */
+
+/* Remove border from toggler */
+.navbar-toggler {
+    border: 0 !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
+}
+
+/* Lines of the Toggler */
+.toggler-icon{
+    width: 30px;
+    height: 3px;
+    background-color: #f3f0e9;
+    display: block;
+    transition: all 0.2s;
+}
+
+/* Adds Space between the lines */
+.middle-bar{
+    margin: 5px auto;
+}
+
+/* State when navbar is opened (START) */
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+/* State when navbar is opened (END) */
+
+/* State when navbar is collapsed (START) */
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+/* State when navbar is collapsed (END) */
+
+/* Color of Toggler when collapsed */
+.navbar-toggler.collapsed .toggler-icon {
+    background-color: rgb(214, 158, 61);
+}
+
+/* ************************* Navbar Toggler Animation End **************************************** */
+
 /* Adjust the size of the logo */
-#main-nav img {
+header img {
     width: 200px;
 }
 
@@ -150,10 +237,10 @@ button {
     background-size: cover;
     background-position: center;
     color: rgb(255, 255, 255);
-    padding: 0 20px;
     justify-content: center;
     align-items: center;
     height: 350px;
+    width: 100%;
 }
 
 /* Add top and bottom margin for elements of the hero banner */
@@ -166,23 +253,21 @@ button {
     text-transform: uppercase;
     font-weight: 800;
     font-size: 12px;
-    padding: 9px 20px;
+    padding: 7px 20px;
     border: none;
-    transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.5s;
 }
 
 .explore:hover {
     background-color: rgb(214, 158, 61);
     color: white;
-    border: 1px solid white;
     border-radius: 100px;
-    transform: scale(0.9);
+    transform: scale(0.95);
 }
 
 .explore:focus {
     background-color: rgb( 150, 111, 44);
     color: white;
-    border: 1px solid white;
     border-radius: 100px;       
     transform: scale(0.9);
 }
@@ -291,13 +376,14 @@ button {
 }
 
 .location:hover {
-    border: 1px solid rgb(214, 158, 61);
+    background-color: rgb(214, 158, 61);
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 100px;
-    transform: scale(0.9);
+    transform: scale(0.95);
 }
 
 .about-us {
-    margin: 70px 0;
+    margin: 70px auto;
 }
 
 .about-btn {
@@ -308,6 +394,14 @@ button {
     text-transform: uppercase;
     font-weight: 800;
     font-size: 12px;
+    transition: all ease-in-out 0.5s;
+}
+
+.about-btn:hover {
+    background-color: rgb(214, 158, 61);
+    color: black;
+    border-radius: 100px;
+    transform: scale(0.9);
 }
 
 .testimonials {
@@ -394,6 +488,12 @@ h3 {
     font-size: 1.728rem;
 }
     
+.container {
+    max-width: 768px;
+    width: 600px;
+    margin: 0 auto;
+}
+
 /* Change the height of the banner */
 #banner {
     height: 490px;
@@ -431,33 +531,35 @@ h3 {
 }
 
 .offers {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-}
-
-.fair-trade {
-    grid-column: 1/2;
-}
-
-.lacal-baked {
-    grid-column: 3/4;
-}
-
-.made-with-love {
-    grid-column: 2/3;
-    grid-row: 2/2;
-}
-
-.store {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-bet;
+}
+
+/* Add styles to the explore button along with an animation effect */
+.explore {
+    font-size: 16px;
+    padding: 7px 20px;
+    border: none;
+    transition: all ease-in-out 0.5s;
+}
+
+.store-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
 }
 
 .store-info {
-    margin: 30px;
+    display: flex;
+}
+
+.store-info button {
+    margin-top: auto;
+}
+
+/* Button */
+.location {
+    font-size: 16px;
 }
 
 .store-info h2 {
@@ -508,18 +610,12 @@ h3 {
 
 @media screen and (min-width: 1100px) {
 
-#main-nav {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-}
-
-#main-nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Specify the width for the container/wrapper */
+.container {
+    max-width: 1200px;
+    width: 1100px;
+    margin: 0 auto;
+    padding: 0 10px;
 }
 
 /* Change font size for all headings */
@@ -541,8 +637,52 @@ h3 {
 }
 
 .offers {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+    justify-content: space-evenly;
+    align-items: end;
+    gap: 30px;
+}
+
+.fair-trade {
+    grid-column: 1/2;
+}
+
+.lacal-baked {
+    grid-column: 3/4;
+}
+
+.made-with-love {
+    grid-column: 2/3;
+    grid-row: 1/1;
+}
+
+/* Add styles to the explore button along with an animation effect */
+.explore {
+    font-size: 16px;
+    padding: 7px 20px;
+    border: none;
+    transition: all ease-in-out 0.5s;
+}
+
+.store-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+
+.store-info {
     display: flex;
-    align-items: center;
+}
+
+.store-info button {
+    margin-top: auto;
+}
+
+/* Button */
+.location {
+    font-size: 16px;
 }
 
 .about-us {
