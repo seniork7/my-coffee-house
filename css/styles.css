@@ -13,6 +13,15 @@ a {
     list-style-type: none;
 }
 
+
+/* Styling all link tags */
+
+main a {
+    background-color: white;
+    color: rgb(214, 158, 61);
+
+}
+
 /* Change the background color of the body and reset the margin of the body to 0 */
 body {
     background-color: #f3f0e9;
@@ -258,13 +267,12 @@ header img {
 .explore:hover {
     background-color: rgb(214, 158, 61);
     color: white;
-    transform: scale(0.95);
+    transform: scale(0.9);
 }
 
 .explore:focus {
     background-color: rgb( 150, 111, 44);
-    color: white;       
-    transform: scale(0.9);
+    color: white;
 }
 
 
@@ -272,7 +280,8 @@ header img {
 .main-text {
     color: rgb(214, 158, 61);
     text-transform: uppercase;
-    margin: 50px 0 -20px 0;
+    margin: 50px 0 0 0;
+    font-weight: bold;
 }
 
 /* Add a grid layout and create grid area template to arrange coffee images in the welcome*/
@@ -378,7 +387,7 @@ header img {
 }
 
 .about-us {
-    margin: 70px auto;
+   
 }
 
 .about-btn {
@@ -396,7 +405,7 @@ header img {
 .about-btn:hover {
     background-color: rgb(214, 158, 61);
     color: black;
-    transform: scale(0.9);
+    transform: scale(0.95);
 }
 
 .testimonials {
@@ -607,7 +616,9 @@ h3 {
 
 .offers {
     display: flex;
-    justify-content: space-bet;
+    align-items: start;
+    justify-items: center;
+    gap: 20px;
 }
 
 /* Add styles to the explore button along with an animation effect */
@@ -621,14 +632,11 @@ h3 {
 .store-items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
+    justify-content: space-between;
+    gap: 50px;
 }
 
-.store-info {
-    display: flex;
-}
-
-.store-info button {
+.store-info .location {
     margin-top: auto;
 }
 
@@ -641,28 +649,20 @@ h3 {
     margin-bottom: 50px;
 }
 
+#about {
+    padding: 100px 0;
+}
+
+.about-us img {
+    width: 100%;
+}
+
 .about-us {
    display: grid;
    grid-template-columns: repeat(2,1fr);
    align-items: center;
    justify-content: center;
    gap: 15px;
-}
-
-.about-info {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: start;
-}
-
-.p-text{
-    color: rgb(214, 158, 61);
-    margin: 0;
-}
-
-.about-info h2 {
-    margin: 5px 0;
 }
 
 .about-btn {
