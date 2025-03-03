@@ -284,6 +284,8 @@ header img {
 /* Add styles to the explore button along with an animation effect */
 .explore {
     text-transform: uppercase;
+    color: white;
+    background-color: rgb(214, 158, 61);
     font-weight: 800;
     font-size: 12px;
     padding: 7px 20px;
@@ -293,8 +295,8 @@ header img {
 }
 
 .explore:hover {
-    background-color: rgb(214, 158, 61);
-    color: white;
+    background-color: white;
+    color: rgb(214, 158, 61);
     transform: scale(0.9);
 }
 
