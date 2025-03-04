@@ -19,13 +19,15 @@ exploreBtn.addEventListener('click', () => {
     alert('Welcome to a new coffee experience!');
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+window.onload = function() {
     window.addEventListener("scroll", function() {
         const nav = document.querySelector("nav");
-        if (window.scrollY > 50) {
-            nav.classList.add("scrolled");
-        } else {
-            nav.classList.remove("scrolled");
+        if (nav) { // Ensure nav exists before applying class
+            if (window.scrollY > 50) {
+                nav.classList.add("scrolled");
+            } else {
+                nav.classList.remove("scrolled");
+            }
         }
     });
-});
+};

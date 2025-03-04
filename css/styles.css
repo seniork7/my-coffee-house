@@ -47,7 +47,7 @@ main a {
 
 /* Change the background color of the body and reset the margin of the body to 0 */
 body {
-    background-color: #f3f0e9;
+    background-color: #eee3c9;
     margin: 0;
     padding-top: 56px;
 }
@@ -259,16 +259,29 @@ nav > ul > a:focus {
 header img {
     width: 200px;
 }
-
-/* Use flexbox to align the information in the banner section */
-#banner {
-    display: flex;
-    flex-direction: column;
-
-/* Use a background image and add an overlay by using a linear gradient and alter the alpha channel to change the overlay's opacity */
+/* Home Banner Image */
+#home-banner {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url("../images/hero-background.jpg");
     background-size: cover;
     background-position: center;
+}
+/* about Banner Image */
+#about-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url("../images/our-story.jpg");
+    background-size: cover;
+    background-position: center;
+}
+/* Menu Banner Image */
+#menu-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url("../images/menu-banner.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Use flexbox to align the information in the banner section */
+.banner {
+    display: flex;
+    flex-direction: column;
     color: rgb(255, 255, 255);
     justify-content: center;
     align-items: center;
@@ -603,7 +616,7 @@ h3 {
 }
 
 /* Change the height of the banner */
-#banner {
+.banner {
     height: 490px;
 }
 
@@ -816,7 +829,7 @@ h3 {
 }
     
 /* Change the height of the banner */
-#banner {
+.banner {
     height: 700px;
 }
 

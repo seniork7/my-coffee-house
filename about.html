@@ -64,20 +64,20 @@
         <!-- Nav Bar end --> 
     </header>
 
-    <main id="main-section" class="container mt-5 pt-5">
-        <!-- Hero Section -->
-        <section class="hero-about text-center text-white py-5" style="background-image: url('images/hero-about.jpg'); background-size: cover; background-position: center;">
-            <div class="container">
-                <h1 class="display-4 fw-bold">Our Story</h1>
-                <p class="lead mt-3">A journey of passion, quality, and community that brings people together over coffee.</p>
-            </div>
-        </section>
+    <main id="main-section">
+         <!-- Structuring the "hero" banner (image is added as a background image) -->
+         <div id="about-banner" class="banner">
+            <!-- Add hero image as background image -->
+            <h1 class="display-4 fw-bold">Our Story</h1>
+            <p class="lead mt-3">A journey of passion, quality, and community that brings people together over coffee.</p>
+        </div>
         
         <!-- About Us Section -->
-        <h1 class="text-center">About Us</h1>
-        <p class="text-center">Welcome to My Coffee House, where every cup tells a story. Since our founding, we have been committed to offering more than just coffee. We strive to create a welcoming environment where connections are made, and memories are brewed.</p>
+         <section class="container mt-5">
+            <p class="text-center">Welcome to My Coffee House, where every cup tells a story. Since our founding, we have been committed to offering more than just coffee. We strive to create a welcoming environment where connections are made, and memories are brewed.</p>
+         </section>
 
-        <section class="mt-5">
+        <section class="container mt-5">
             <h2 class="text-center">Our Mission</h2>
             <p class="text-center">Our mission is to deliver an exceptional coffee experience that blends sustainability, community, and quality. We aim to be the heart of the neighborhood, where locals gather, friends meet, and creativity thrives.</p>
         </section>
@@ -87,27 +87,34 @@
             <h2 class="text-center">Our Values</h2>
             <div class="row mt-4 text-center">
                 <div class="col-md-4">
-                    <i class="fa fa-leaf fa-3x mb-3 text-success"></i>
+                    <i class="fa fa-leaf fa-3x mb-3" style="color: #d69e3d;"></i>
                     <h3>Quality</h3>
                     <p>We use only the finest, sustainably sourced ingredients to craft every cup and bite.</p>
                 </div>
                 <div class="col-md-4">
-                    <i class="fa fa-handshake fa-3x mb-3 text-primary"></i>
+                    <i class="fa fa-handshake fa-3x mb-3" style="color: #d69e3d;"></i>
                     <h3>Community</h3>
                     <p>We strive to be a place where everyone feels welcome and valued.</p>
                 </div>
                 <div class="col-md-4">
-                    <i class="fa fa-seedling fa-3x mb-3 text-warning"></i>
+                    <i class="fa fa-seedling fa-3x mb-3" style="color: #d69e3d;"></i>
                     <h3>Sustainability</h3>
                     <p>We are committed to eco-friendly practices and reducing our environmental footprint.</p>
                 </div>
             </div>
         </section>
 
-        <section class="mt-5">
-            <h2 class="text-center">Our Story</h2>
-            <p class="text-center">In the heart of our community, My Coffee House began as a small coffee shop with big dreams. From sourcing beans ethically to crafting drinks with care, we have grown into a beloved spot for coffee enthusiasts and casual drinkers alike.</p>
-            <img src="images/about-us.jpeg" class="img-fluid rounded mt-3" alt="Our story in a picture">
+        <!-- Our Story Section -->
+        <section class="container mt-5">
+            <div class="row mt-4">
+            <div class="col-md-6 d-flex flex-column align-items-center justify-content-center">
+            <h2 class="text-center">The Story</h2>
+                        <p>In the heart of our community, My Coffee House began as a small coffee shop with big dreams. From sourcing beans ethically to crafting drinks with care, we have grown into a beloved spot for coffee enthusiasts and casual drinkers alike.</p>
+                    </div>
+                <div class="col-md-6">
+                    <img src="images/about-us.jpeg" class="img-fluid rounded" alt="Our story in a picture">
+                </div>
+            </div>
         </section>
 
         <!-- Meet the Team -->
@@ -117,7 +124,7 @@
                 <div class="col-md-4">
                     <img src="images/team-member1.jpg" alt="Team member 1" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px;">
                     <h3>Alex Johnson</h3>
-                    <p>Founder & Head Barista</p>
+                    <p>Founder & Head Barista</p>   
                 </div>
                 <div class="col-md-4">
                     <img src="images/team-member2.jpg" alt="Team member 2" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px;">
@@ -137,22 +144,22 @@
             <h2 class="text-center">What Sets Us Apart</h2>
             <div class="row mt-4 text-center">
                 <div class="col-md-3">
-                    <i class="fa fa-coffee fa-3x mb-3 text-brown"></i>
+                    <i class="fa fa-coffee fa-3x mb-3" style="color: #d69e3d;"></i>
                     <h4>Freshly Roasted Beans</h4>
                     <p>Ethically sourced and freshly roasted coffee beans for every brew.</p>
                 </div>
                 <div class="col-md-3">
-                    <i class="fa fa-bread-slice fa-3x mb-3 text-warning"></i>
+                    <i class="fa fa-bread-slice fa-3x mb-3" style="color: #d69e3d;"></i>
                     <h4>Local Baked Goods</h4>
                     <p>Partnering with local bakers for the freshest treats.</p>
                 </div>
                 <div class="col-md-3">
-                    <i class="fa fa-home fa-3x mb-3 text-primary"></i>
+                    <i class="fa fa-home fa-3x mb-3" style="color: #d69e3d;"></i>
                     <h4>Ambience</h4>
                     <p>A cozy and inviting space that feels like home.</p>
                 </div>
                 <div class="col-md-3">
-                    <i class="fa fa-recycle fa-3x mb-3 text-success"></i>
+                    <i class="fa fa-recycle fa-3x mb-3" style="color: #d69e3d;"></i>
                     <h4>Sustainability</h4>
                     <p>Dedicated to eco-friendly practices and community support.</p>
                 </div>
