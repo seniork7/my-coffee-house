@@ -110,6 +110,10 @@ button {
     font-family: 'karla', sans-serif;
 }
 
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 /* Change styles for skip links*/
 #skip-links {
     margin: 0;
