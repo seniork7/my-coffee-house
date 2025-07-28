@@ -1,0 +1,94 @@
+/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/********************** CUSTOM CSS *******************/
+/* Home Banner Image */
+#home-banner {
+    background: url("images/hero-background.jpg") no-repeat;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+/* about Banner Image */
+#about-banner {
+    background: url("images/our-story.jpg") no-repeat;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+/* Menu Banner Image */
+#menu-banner {
+    background: url("images/menu-banner.jpg") no-repeat;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Use absolute to alter the position of the skip links */
+#skip-links a{
+    position: absolute;
+    top: -50px;
+    padding: 5px;
+    color: white;
+}
+
+/* Reset the postion of the skip links when they are in focus and change the background color */
+#skip-links a:focus{
+    top: 0;
+    background-color: #d69e3d;
+}
+
+@media screen and (min-width: 760px) {
+    #home-banner,
+    #about-banner,
+    #menu-banner {
+        height: 900px;
+    }
+}
