@@ -220,12 +220,13 @@ function createMenu(items, sectionId) {
 
         // create the html template for each item
         card.innerHTML = `
-            <img src="${item.image || 'https://source.unsplash.com/400x300/?coffee'}" alt="${item.name}" class="w-full h-48 object-cover mb-3 rounded">
-            <h4 class="font-semibold text-lg mb-1">${item.name}</h4>
-            <p class="text-sm mb-2">${item.description || 'No description available.'}</p>
-            <p class="font-bold mb-2">$${item.price.toFixed(2)}</p>
-            <button class="mt-auto px-3 py-2 bg-yellow-600 text-white rounded" data-id="${item.id}">Add to Cart</button>
-        `;
+            <div class="flex flex-col">
+                <img src="${item.image || 'https://source.unsplash.com/400x300/?coffee'}" alt="${item.name}" class="w-full h-48 object-cover mb-3 rounded">
+                <h4 class="font-semibold text-lg mb-1">${item.name}</h4>
+                <p class="text-sm mb-2">${item.description || 'No description available.'}</p>
+                <p class="font-bold mb-2">$${item.price.toFixed(2)}</p>
+                <button class="mt-auto self-start px-5 py-2 bg-yellow-600 text-white transition-all transform hover:scale-95 hover:bg-yellow-700 rounded-full" data-id="${item.id}">Add to Cart</button>
+            </div>`;
 
         // add the div to the page
         menuItems.appendChild(card);
@@ -312,7 +313,7 @@ function createCheckout() {
         // create a button to remove item from cart
         div.innerHTML = `
             <span>${item.quantity} ${menuItem.name} = $${(menuItem.price * item.quantity).toFixed(2)}</span>
-            <button class="px-6 py-2 bg-red-500 text-white rounded" data-index="${index}">Remove</button>
+            <button class="px-6 py-2 bg-red-500 text-white rounded " data-index="${index}">Remove</button>
         `;
 
         // add the div to the page

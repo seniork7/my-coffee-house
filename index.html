@@ -99,139 +99,132 @@
 
                 <p class="max-w-2xl md:text-2xl text-white text-center px-4">the best coffee shop in town</p>
 
-                <a href="about.html" class="px-6 py-3 bg-yellow-600 text-white rounded animate__animated animate__bounceIn">Explore More</a>
+                <a href="about.html" class="px-6 py-3 bg-yellow-600 text-white transition-all hover:bg-yellow-700 rounded-full animate__animated animate__bounceIn">Explore More</a>
             </div>
         </div>
 
-        <!-- Welcome Section -->
-        <section>
-            <div class="container">
-                <p class="main-text">Welcome to My Coffee House</p>
-                <h2>A NEW WAY TO TASTE COFFEE</h2>
+        <div class="flex flex-col items-center justify-center container mx-auto mt-8 p-6">
+            <!-- Welcome Section -->
+            <section>
+                    <p class="md:text-2xl py-2 text-center">Welcome to My Coffee House</p>
+                    <h2 class="text-3xl font-bold mb-4 text-center pb-5">A NEW WAY TO TASTE COFFEE</h2>
 
-                <div class="coffee">
-                    <img class="latte" src="images/latte.jpeg" alt="An image showing latte being made">
-                    <img class="coffee-beans" src="images/coffee-beans.jpeg" alt="An image showing coffee beans in a glass container">
-                    <img class="pouring-coffee" src="images/pouring-coffee.jpeg" alt="Black coffee being poured into a glass jar">
-                    <img class="three-cups" src="images/three-cups.jpeg" alt="This image shows individuals holding two cups of latte and one cup of coffee beans">
-                    <img class="smiling-employee" src="images/smiling-employee.jpeg" alt="This image shows an employee smiling while carrying out her job">
-                </div>
-            </div>
-        </section>
-        
-    <!-- Offers Section -->
-        <section class="mt-5">
-            <div class="container">
-                <p class="main-text center-align">What we Offer</p>
-                <h2 class="center-align welcome">Why visit us?</h2>
+                    <div class="grid content-center grid-cols-1 md:grid-cols-2 gap-2">
+                        <img class="rounded transition-all transform hover:scale-95" src="images/latte.jpeg" alt="An image showing latte being made">
 
-                <div class="offers">
-                    <div class="special-offer fair-trade">
-                        <img src="images/fair-trade.svg" alt="This is an image of the fair trade symbol">
-                        <h3>Fair trade coffee</h3>
-                        <p>We build direct relationships with the farmers and producers who help in the development of delicious, sustainable and organic coffee.
-                        </p>
+                        <div class="grid grid-cols-2 gap-2">
+                            <img class="rounded transition-all transform hover:scale-95" src="images/coffee-beans.jpeg" alt="An image showing coffee beans in a glass container">
+                            <img class="rounded transition-all transform hover:scale-95" src="images/pouring-coffee.jpeg" alt="Black coffee being poured into a glass jar">
+                            <img class="rounded transition-all transform hover:scale-95" src="images/three-cups.jpeg" alt="This image shows individuals holding two cups of latte and one cup of coffee beans">
+                            <img class="rounded transition-all transform hover:scale-95" src="images/smiling-employee.jpeg" alt="This image shows an employee smiling while carrying out her job">
+                        </div>
                     </div>
-        
-                    <div class="special-offer lacal-baked">
-                        <img src="images/local-baked-goods.svg" alt="This is an image of the baked goods symbol">
-                        <h3>Local baked goods</h3>
-                        <p>We use local products to bake our goods and bring in a variety of treats from local bakers with our community</p>
-                    </div>
-        
-                    <div class="special-offer made-with-love">
-                        <img src="images/made-with-love.svg" alt="This is an image of the made with love symbol">
-                        <h3>Made with love</h3>
-                        <p>We value our customers and make it our priority to serve everyone with respect and a friendly smile to start their day of right.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+            
+        <!-- Offers Section -->
+            <section class="mt-40">
+                    <p class="md:text-2xl py-2 text-center">What we Offer</p>
+                    <h2 class="text-3xl font-bold mb-4 text-center pb-5">Why visit us?</h2>
 
-    <!-- Customer Favorites -->
-        <section class="pt-5 light-bg">
-            <div class="container">
-                <h2 class="text-center">Customer Favorites</h2>
-                <div class="row text-center mt-4">
-                    <div class="col-md-4">
-                        <img src="images/latte-art.jpg" alt="Latte art" class="img-fluid rounded">
-                        <h3 class="mt-3">Latte Art</h3>
-                        <p>Perfectly crafted lattes with stunning art to brighten your day.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-20">
+                        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center flex flex-col items-center justify-center gap-5">
+                            <img src="images/fair-trade.svg" class="w-20 mb-4" alt="This is an image of the fair trade symbol" width="">
+                            <h3 class="font-bold">Fair trade coffee</h3>
+                            <p class="max-w-xs">We build direct relationships with the farmers and producers who help in the development of delicious, sustainable and organic coffee.
+                            </p>
+                        </div>
+            
+                        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center flex flex-col items-center justify-center gap-5">
+                            <img src="images/local-baked-goods.svg" class="w-20 mb-4" alt="This is an image of the baked goods symbol" width="">
+                            <h3 class="font-bold">Local baked goods</h3>
+                            <p class="max-w-xs">We use local products to bake our goods and bring in a variety of treats from local bakers with our community</p>
+                        </div>
+            
+                        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center flex flex-col items-center justify-center gap-5">
+                            <img src="images/made-with-love.svg" class="w-20 mb-4" alt="This is an image of the made with love symbol" width="">
+                            <h3 class="font-bold">Made with love</h3>
+                            <p class="max-w-xs">We value our customers and make it our priority to serve everyone with respect and a friendly smile to start their day of right.</p>
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <img src="images/cold-brew.jpg" alt="Cold brew coffee" class="img-fluid rounded">
-                        <h3 class="mt-3">Cold Brew</h3>
-                        <p>Refreshing and smooth, our cold brew is a customer favorite.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="images/pastry.jpg" alt="Fresh pastry" class="img-fluid rounded">
-                        <h3 class="mt-3">Fresh Pastries</h3>
-                        <p>Pair your coffee with one of our delicious, freshly baked pastries.</p>
+            </section>
+
+        <!-- Customer Favorites -->
+        <section class="mt-40">
+            <h2 class="text-3xl font-bold mb-6 text-center">Customer Favorites</h2>
+            <div class="grid content-center grid-cols-1 md:grid-cols-3 gap-2  overflow-x-auto gap-6 px-4 scrollbar-hide">
+                <div class="relative min-w-[300px] rounded-lg overflow-hidden shadow-lg">
+                    <img src="images/latte-art.jpg" alt="Latte Art" class="w-full h-64 object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
+                        <h3 class="text-xl font-semibold">Latte Art</h3>
+                        <p class="max-w-xs">Perfectly crafted lattes with stunning art to brighten your day.</p>
                     </div>
                 </div>
-            </div>
-        </section>
-
-    <!-- Daily Specials or Seasonal Promotions -->
-        <section class="py-5 light-bg">
-            <div class="container">
-                <h2 class="text-center">Daily Specials</h2>
-                <div class="row text-center mt-4">
-                    <div class="col-md-4">
-                        <img src="images/peppermint-mocha.jpg" alt="Peppermint Mocha" class="img-fluid rounded">
-                        <h3 class="mt-3">Peppermint Mocha</h3>
-                        <p>A holiday favorite, blending rich chocolate with refreshing peppermint.</p>
+                <div class="relative min-w-[300px] rounded-lg overflow-hidden shadow-lg">
+                    <img src="images/cold-brew.jpg" alt="Cold Brew" class="w-full h-64 object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
+                        <h3 class="text-xl font-semibold">Cold Brew</h3>
+                        <p class="max-w-xs">Refreshing and smooth, our cold brew is a customer favorite.</p>
                     </div>
-                    <div class="col-md-4">
-                        <img src="images/caramel-brulee-latte.jpg" alt="Caramel Brulee Latte" class="img-fluid rounded">
-                        <h3 class="mt-3">Caramel Brulee Latte</h3>
-                        <p>Sweet and creamy, topped with a caramel brulee crunch.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="images/spiced-apple-cider.jpg" alt="Spiced Apple Cider" class="img-fluid rounded">
-                        <h3 class="mt-3">Spiced Apple Cider</h3>
-                        <p>A warm and cozy non-coffee option for the season.</p>
+                </div>
+                <div class="relative min-w-[300px] rounded-lg overflow-hidden shadow-lg">
+                    <img src="images/pastry.jpg" alt="Fresh Pastry" class="w-full h-64 object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
+                        <h3 class="text-xl font-semibold">Almond Flour Muffins</h3>
+                        <p class="max-w-xs">Pair your coffee with one of our delicious, Almond Flour Muffins.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-    <!-- Testimonial Section -->
-        <section class="testimonials">
-            <div class="container">
-                <p class="main-text">Testimonials</p>
-                <h2>What our customers say about us</h2>
-
-                <div class="service-reviews">
-                    <div class="reviews first">
-                        <blockquote>
-                            "I always make a point to visit My Coffee Company when in Ottawa. Delicious coffee and friendly service."
-                        </blockquote>
-                        <p>
-                            Jane D - Toronto
-                        </p>
+        <!-- Daily Specials or Seasonal Promotions -->
+        <section class="mt-40">
+            <h2 class="text-3xl font-bold mb-6 text-center">Daily Specials</h2>
+            <div class="grid content-center grid-cols-1 md:grid-cols-3 gap-2  overflow-x-auto gap-6 px-4 scrollbar-hide">
+                <div class="relative min-w-[300px] rounded-lg overflow-hidden shadow-lg">
+                    <img src="images/peppermint-mocha.jpg" alt="Peppermint Mocha" class="w-full h-64 object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
+                        <h3 class="text-xl font-semibold">Peppermint Mocha</h3>
+                        <p class="max-w-xs">A holiday favorite, blending rich chocolate with refreshing peppermint.</p>
                     </div>
-    
-                    <div class="reviews second">
-                        <blockquote>
-                            "Great atmosphere to get some work done while enjoying a cup or two of incredible coffee."
-                        </blockquote>
-                        <p>
-                            Scott S - Ottawa
-                        </p>
+                </div>
+                <div class="relative min-w-[300px] rounded-lg overflow-hidden shadow-lg">
+                    <img src="images/caramel-brulee-latte.jpg" alt="Caramel Brulee Latte" class="w-full h-64 object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
+                        <h3 class="text-xl font-semibold">Caramel Brulee Latte</h3>
+                        <p class="max-w-xs">Sweet and creamy, topped with a caramel brulee crunch.</p>
                     </div>
-    
-                    <div class="reviews third">
-                        <blockquote>
-                            "Best coffee in Ottawa and the service is top notch. Would highly recommend a visit."
-                        </blockquote>
-                        <p>
-                            Susie F - Ottawa 
-                        </p>
+                </div>
+                <div class="relative min-w-[300px] rounded-lg overflow-hidden shadow-lg">
+                    <img src="images/spiced-apple-cider.jpg" alt="Spiced Apple Cider" class="w-full h-64 object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 text-white p-4">
+                        <h3 class="text-xl font-semibold">Spiced Apple Cider</h3>
+                        <p class="max-w-xs">A warm and cozy non-coffee option for the season.</p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Testimonial Section -->
+            <section class="mt-40">
+                    <p class="md:text-2xl py-2 text-center">Testimonials</p>
+                    <h2 class="text-3xl font-bold mb-4 text-center pb-5">What our customers say about us</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl">
+                    <div class="flex flex-col justify-end first bg-white p-6 rounded-lg shadow">
+                        <blockquote class="italic text-white">"I always make a point to visit..."</blockquote>
+                        <p class="mt-2 text-sm text-white">Jane D - Toronto</p>
+                    </div>
+                    <div class="flex flex-col justify-end second bg-white p-6 rounded-lg shadow">
+                        <blockquote class="italic text-white">"Great atmosphere to get some work done while enjoying a cup or two of incredible coffee..."</blockquote>
+                        <p class="mt-2 text-sm text-white">Scott S - Ottawa</p>
+                    </div>
+                    <div class="flex flex-col justify-end third bg-white p-6 rounded-lg shadow">
+                        <blockquote class="italic text-white">"Best coffee in Ottawa and the service is top notch. Would highly recommend a visit."</blockquote>
+                        <p class="mt-2 text-sm text-white">Susie F - Ottawa</p>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
     
     <!-- Scroll to top button -->
