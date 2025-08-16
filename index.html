@@ -1,75 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Site title -->
-        <title>My Coffee House</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Coffee House</title>
 
     <!-- Favicon -->
-        <link rel="icon" type="image/x-icon" href="images/favicon.gif">
+    <link rel="icon" type="image/x-icon" href="images/favicon.gif">
 
-    <!-- TailwindCSS CDN -->
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- TailwindCSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
     <!-- Animate.css -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
     <!-- Link CSS file -->
-        <link rel="stylesheet" href="style.css">
-    </head>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-<body class="bg-beige-50 text-gray-900">
-<!-- *  * * * * * * * * * * * * * * * * * * * * * * * * * *
-    *                                                 *
-    *       Skip Links Added for Accessibility        *
-    *       -----------------------------------       *
-    *                                                 * 
-    * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<body class="bg-beige text-espresso">
+    <!-- Skip Links for Accessibility -->
     <ul id="skip-links">
         <li><a href="#main-nav">Go to main navigation</a></li>
         <li><a href="#main-section">Go to main section</a></li>
     </ul>
 
-
-<!-- *  * * * * * * * * * * * * * * * * * * * * * * * * * *
-    *                                                 *
-    *             Structuring the Header              *
-    *           ---------------------------           *
-    *                                                 * 
-    * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
     <header>
         <!----------------- Nav Bar Start -------------------------->
-        <nav id="main-nav" class="bg-white shadow-md fixed w-full z-10">
+        <nav id="main-nav" class="bg-cream shadow-md fixed w-full z-10">
             <div class="container mx-auto flex justify-between items-center p-4">
-                <a href="index.html" class="text-2xl font-bold text-yellow-700">
-                    <img src="images/my-coffee-shop-logo.svg" alt="This is the coffee shop logo" width="200px">
+                <a href="index.html" class="text-2xl font-bold text-gold">
+                    <img src="images/my-coffee-shop-logo.svg" alt="This is the coffee shop logo" class="w-32 md:w-48">
                 </a>
                 <div class="flex gap-20">
                     <ul class="hidden md:flex space-x-6">
-                        <li><a href="index.html" class="hover:text-yellow-600">Home</a></li>
-                        <li><a href="about.html" class="hover:text-yellow-600">About</a></li>
-                        <li><a href="menu.html" class="hover:text-yellow-600">Menu</a></li>
-                        <li><a href="blog.html" class="hover:text-yellow-600">Blog</a></li>
-                        <li><a href="contact.html" class="hover:text-yellow-600">Contact</a></li>
+                        <li><a href="index.html" class="link">Home</a></li>
+                        <li><a href="about.html" class="link">About</a></li>
+                        <li><a href="menu.html" class="link">Menu</a></li>
+                        <li><a href="blog.html" class="link">Blog</a></li>
+                        <li><a href="contact.html" class="link">Contact</a></li>
                     </ul>
     
-                    <a href="checkout.html" class="relative ">
+                    <a href="checkout.html" class="relative link">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <span id="cart-count" class="hidden absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"></span>
                     </a>
                 </div>
                 <div class="md:hidden navbar-toggler">
-                    <button id="nav-toggle">
-                        &#9776;
-                        <!-- <button id="nav-toggle navbar-toggler">
-                        <span class="toggler-icon top-bar"></span>
-                        <span class="toggler-icon middle-bar"></span>
-                        <span class="toggler-icon bottom-bar"></span> -->
-                    </button>
+                    <button id="nav-toggle"><i class="fa-solid fa-bars text-gold text-xl"></i></button>
                 </div>
             </div>
             <ul id="nav-menu" class="hidden bg-white md:hidden">
@@ -78,169 +59,195 @@
                 <li><a href="menu.html" class="block p-2">Menu</a></li>
                 <li><a href="blog.html" class="block p-2">Blog</a></li>
                 <li><a href="contact.html" class="block p-2">Contact</a></li>
-        </ul>
+            </ul>
         </nav>
         <!----------------- Nav Bar End -------------------------->
     </header>
 
-<!-- *  * * * * * * * * * * * * * * * * * * * * * * * * * *
-    *                                                 *
-    *              Structuring the Main               *
-    *           ---------------------------           *
-    *                                                 * 
-    * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
     <main id="main-section">
-        <!-- Structuring the "hero" banner (image is added as a background image) -->
-        <div id="home-banner" class="bg-cover bg-center">
-            <div class="h-full w-full bg-black bg-opacity-50 flex flex-col items-center justify-center gap-5">
-                <p class="max-w-4xl text-white text-center text-4xl md:text-8xl font-bold animate__animated animate__fadeInDown">
-                    Experience Coffee Like Never Before
-                </p>
-
-                <p class="max-w-2xl md:text-2xl text-white text-center px-4">the best coffee shop in town</p>
-
-                <a href="about.html" class="px-6 py-3 bg-yellow-600 text-white transition-all hover:bg-yellow-700 rounded-full animate__animated animate__bounceIn">Explore More</a>
+        <!-- Hero Banner -->
+        <div id="home-banner">
+            <div class="flex flex-col items-center justify-center gap-5 w-full h-full pt-20">
+                <h1 class="heading-main max-w-xs md:max-w-2xl text-beige text-center animate__animated animate__fadeInDown">
+                    Experience Coffee Like Never Before...
+                </h1>
+                <p class="banner-quote text-beige text-center max-w-xs md:max-w-2xl px-4 animate__animated animate__fadeInDown">every sip whispers elegance</p>
+                <a href="about.html" class="btn pb-20 animate__animated animate__bounceIn">Explore More</a>
             </div>
         </div>
 
-        <div class="flex flex-col items-center justify-center container mx-auto mt-8 p-6">
-            <!-- Welcome Section -->
-            <section>
-                    <p class="md:text-2xl py-2 text-center">Welcome to My Coffee House</p>
-                    <h2 class="text-3xl font-bold mb-4 text-center pb-5">A NEW WAY TO TASTE COFFEE</h2>
+        <!-- Welcome Section -->
+        <section class="bg-gold">
+            <div class="flex flex-col items-center justify-center mx-auto md:container py-20 px-10">
+                <h2 class="heading-section text-center pb-5">A NEW WAY TO TASTE COFFEE</h2>
 
-                    <div class="grid content-center grid-cols-1 md:grid-cols-2 gap-2">
-                        <img class="rounded transition-all transform hover:scale-95" src="images/latte.jpeg" alt="An image showing latte being made">
-
-                        <div class="grid grid-cols-2 gap-2">
-                            <img class="rounded transition-all transform hover:scale-95" src="images/coffee-beans.jpeg" alt="An image showing coffee beans in a glass container">
-                            <img class="rounded transition-all transform hover:scale-95" src="images/pouring-coffee.jpeg" alt="Black coffee being poured into a glass jar">
-                            <img class="rounded transition-all transform hover:scale-95" src="images/three-cups.jpeg" alt="This image shows individuals holding two cups of latte and one cup of coffee beans">
-                            <img class="rounded transition-all transform hover:scale-95" src="images/smiling-employee.jpeg" alt="This image shows an employee smiling while carrying out her job">
-                        </div>
+                <div class="grid content-center grid-cols-1 md:grid-cols-2 gap-2">
+                    <img class="rounded transition-all transform hover:scale-95" src="images/latte.jpeg" alt="An image showing latte being made">
+                    <div class="grid grid-cols-2 gap-2">
+                        <img class="rounded transition-all transform hover:scale-95" src="images/coffee-beans.jpeg" alt="An image showing coffee beans in a glass container">
+                        <img class="rounded transition-all transform hover:scale-95" src="images/pouring-coffee.jpeg" alt="Black coffee being poured into a glass jar">
+                        <img class="rounded transition-all transform hover:scale-95" src="images/three-cups.jpeg" alt="This image shows individuals holding two cups of latte and one cup of coffee beans">
+                        <img class="rounded transition-all transform hover:scale-95" src="images/smiling-employee.jpeg" alt="This image shows an employee smiling while carrying out her job">
                     </div>
-            </section>
-            
+                </div>
+            </div>
+        </section>
+        
         <!-- Offers Section -->
-            <section class="mt-40">
-                    <p class="md:text-2xl py-2 text-center">What we Offer</p>
-                    <h2 class="text-3xl font-bold mb-4 text-center pb-5">Why visit us?</h2>
+        <section class="bg-beige">
+            <div class="flex flex-col items-center justify-center md:container mx-auto pt-20 px-10">
+                <h2 class="heading-section text-center pb-5">Why visit us?</h2>
 
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-20">
-                        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center flex flex-col items-center justify-center gap-5">
-                            <img src="images/fair-trade.svg" class="w-20 mb-4" alt="This is an image of the fair trade symbol" width="">
-                            <h3 class="font-bold">Fair trade coffee</h3>
-                            <p class="max-w-xs">We build direct relationships with the farmers and producers who help in the development of delicious, sustainable and organic coffee.
-                            </p>
-                        </div>
-            
-                        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center flex flex-col items-center justify-center gap-5">
-                            <img src="images/local-baked-goods.svg" class="w-20 mb-4" alt="This is an image of the baked goods symbol" width="">
-                            <h3 class="font-bold">Local baked goods</h3>
-                            <p class="max-w-xs">We use local products to bake our goods and bring in a variety of treats from local bakers with our community</p>
-                        </div>
-            
-                        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center flex flex-col items-center justify-center gap-5">
-                            <img src="images/made-with-love.svg" class="w-20 mb-4" alt="This is an image of the made with love symbol" width="">
-                            <h3 class="font-bold">Made with love</h3>
-                            <p class="max-w-xs">We value our customers and make it our priority to serve everyone with respect and a friendly smile to start their day of right.</p>
-                        </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-20">
+                    <div class="card text-center flex flex-col items-center justify-center gap-5">
+                        <img src="images/fair-trade.svg" class="w-20 mb-4" alt="This is an image of the fair trade symbol">
+                        <h3 class="font-bold">Fair trade coffee</h3>
+                        <p class="max-w-xs">We build direct relationships with the farmers and producers who help in the development of delicious, sustainable and organic coffee.</p>
                     </div>
-            </section>
-
-        <!-- Customer Favorites -->
-        <section class="mt-40">
-            <h2 class="text-3xl font-bold mb-6 text-center">Customer Favorites</h2>
-            <div class="grid content-center grid-cols-1 md:grid-cols-3 gap-2  overflow-x-auto gap-6 px-4 scrollbar-hide">
-                <div class="relative min-w-[300px] rounded-lg overflow-hidden shadow-lg">
-                    <img src="images/latte-art.jpg" alt="Latte Art" class="w-full h-64 object-cover">
-                    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
-                        <h3 class="text-xl font-semibold">Latte Art</h3>
-                        <p class="max-w-xs">Perfectly crafted lattes with stunning art to brighten your day.</p>
+        
+                    <div class="card text-center flex flex-col items-center justify-center gap-5">
+                        <img src="images/local-baked-goods.svg" class="w-20 mb-4" alt="This is an image of the baked goods symbol">
+                        <h3 class="font-bold text-espresso">Local baked goods</h3>
+                        <p class="max-w-xs text-espresso">We use local products to bake our goods and bring in a variety of treats from local bakers with our community</p>
                     </div>
-                </div>
-                <div class="relative min-w-[300px] rounded-lg overflow-hidden shadow-lg">
-                    <img src="images/cold-brew.jpg" alt="Cold Brew" class="w-full h-64 object-cover">
-                    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
-                        <h3 class="text-xl font-semibold">Cold Brew</h3>
-                        <p class="max-w-xs">Refreshing and smooth, our cold brew is a customer favorite.</p>
-                    </div>
-                </div>
-                <div class="relative min-w-[300px] rounded-lg overflow-hidden shadow-lg">
-                    <img src="images/pastry.jpg" alt="Fresh Pastry" class="w-full h-64 object-cover">
-                    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
-                        <h3 class="text-xl font-semibold">Almond Flour Muffins</h3>
-                        <p class="max-w-xs">Pair your coffee with one of our delicious, Almond Flour Muffins.</p>
+        
+                    <div class="card text-center flex flex-col items-center justify-center gap-5">
+                        <img src="images/made-with-love.svg" class="w-20 mb-4" alt="This is an image of the made with love symbol">
+                        <h3 class="font-bold text-espresso">Made with love</h3>
+                        <p class="max-w-xs text-espresso">We value our customers and make it our priority to serve everyone with respect and a friendly smile to start their day of right.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Daily Specials or Seasonal Promotions -->
-        <section class="mt-40">
-            <h2 class="text-3xl font-bold mb-6 text-center">Daily Specials</h2>
-            <div class="grid content-center grid-cols-1 md:grid-cols-3 gap-2  overflow-x-auto gap-6 px-4 scrollbar-hide">
-                <div class="relative min-w-[300px] rounded-lg overflow-hidden shadow-lg">
-                    <img src="images/peppermint-mocha.jpg" alt="Peppermint Mocha" class="w-full h-64 object-cover">
-                    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
-                        <h3 class="text-xl font-semibold">Peppermint Mocha</h3>
-                        <p class="max-w-xs">A holiday favorite, blending rich chocolate with refreshing peppermint.</p>
+        <!-- Customer Favorites -->
+        <section>
+            <div class="flex flex-col items-center justify-center md:container mx-auto pt-20 px-10">
+                <h2 class="heading-section text-3xl font-bold mb-6 text-center">Customer Favorites</h2>
+                <div class="grid content-center grid-cols-1 md:grid-cols-3 gap-6 px-4">
+                    <div class="relative min-w-[300px] rounded-lg overflow-hidden shadow-lg">
+                        <img src="images/latte-art.jpg" alt="Latte Art" class="w-full h-64 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
+                            <h3 class="text-xl font-semibold">Latte Art</h3>
+                            <p class="max-w-xs">Perfectly crafted lattes with stunning art to brighten your day.</p>
+                        </div>
+                    </div>
+                    <div class="relative min-w-[300px] rounded-lg overflow-hidden shadow-lg">
+                        <img src="images/cold-brew.jpg" alt="Cold Brew" class="w-full h-64 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
+                            <h3 class="text-xl font-semibold">Cold Brew</h3>
+                            <p class="max-w-xs">Refreshing and smooth, our cold brew is a customer favorite.</p>
+                        </div>
+                    </div>
+                    <div class="relative min-w-[300px] rounded-lg overflow-hidden shadow-lg">
+                        <img src="images/pastry.jpg" alt="Fresh Pastry" class="w-full h-64 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
+                            <h3 class="text-xl font-semibold">Almond Flour Muffins</h3>
+                            <p class="max-w-xs">Pair your coffee with one of our delicious, Almond Flour Muffins.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="relative min-w-[300px] rounded-lg overflow-hidden shadow-lg">
-                    <img src="images/caramel-brulee-latte.jpg" alt="Caramel Brulee Latte" class="w-full h-64 object-cover">
-                    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
-                        <h3 class="text-xl font-semibold">Caramel Brulee Latte</h3>
-                        <p class="max-w-xs">Sweet and creamy, topped with a caramel brulee crunch.</p>
+            </div>
+        </section>
+
+        <!-- Daily Specials -->
+        <section>
+            <div class="flex flex-col items-center justify-center md:container mx-auto py-20 px-10">
+                <h2 class="heading-section text-3xl font-bold mb-6 text-center">Daily Specials</h2>
+                <div class="grid content-center grid-cols-1 md:grid-cols-3 gap-6 px-4">
+                    <div class="relative min-w-[300px] rounded-lg overflow-hidden shadow-lg">
+                        <img src="images/peppermint-mocha.jpg" alt="Peppermint Mocha" class="w-full h-64 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
+                            <h3 class="text-xl font-semibold">Peppermint Mocha</h3>
+                            <p class="max-w-xs">A holiday favorite, blending rich chocolate with refreshing peppermint.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="relative min-w-[300px] rounded-lg overflow-hidden shadow-lg">
-                    <img src="images/spiced-apple-cider.jpg" alt="Spiced Apple Cider" class="w-full h-64 object-cover">
-                    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 text-white p-4">
-                        <h3 class="text-xl font-semibold">Spiced Apple Cider</h3>
-                        <p class="max-w-xs">A warm and cozy non-coffee option for the season.</p>
+                    <div class="relative min-w-[300px] rounded-lg overflow-hidden shadow-lg">
+                        <img src="images/caramel-brulee-latte.jpg" alt="Caramel Brulee Latte" class="w-full h-64 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
+                            <h3 class="text-xl font-semibold">Caramel Brulee Latte</h3>
+                            <p class="max-w-xs">Sweet and creamy, topped with a caramel brulee crunch.</p>
+                        </div>
+                    </div>
+                    <div class="relative min-w-[300px] rounded-lg overflow-hidden shadow-lg">
+                        <img src="images/spiced-apple-cider.jpg" alt="Spiced Apple Cider" class="w-full h-64 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 text-white p-4">
+                            <h3 class="text-xl font-semibold">Spiced Apple Cider</h3>
+                            <p class="max-w-xs">A warm and cozy non-coffee option for the season.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Testimonial Section -->
-            <section class="mt-40">
-                    <p class="md:text-2xl py-2 text-center">Testimonials</p>
-                    <h2 class="text-3xl font-bold mb-4 text-center pb-5">What our customers say about us</h2>
+        <section class="bg-gold">
+            <div class="flex flex-col items-center justify-center md:container mx-auto py-20 px-5">
+                <h2 class="heading-section text-center pb-5">What our customers say about us</h2>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl">
-                    <div class="flex flex-col justify-end first bg-white p-6 rounded-lg shadow">
-                        <blockquote class="italic text-white">"I always make a point to visit..."</blockquote>
-                        <p class="mt-2 text-sm text-white">Jane D - Toronto</p>
+                <div class="relative w-full max-w-4xl mx-auto overflow-hidden">
+                    <div id="testimonial-carousel" class="flex transition-transform duration-500 ease-in-out">
+                        <div class="min-w-full p-6 rounded-lg flex flex-col items-center justify-center text-center">
+                            <p class="text-lg md:text-2xl max-w-xs md:max-w-md italic">"This is the best service ever! Highly recommend."</p>
+                            <h4 class="mt-2 font-bold">— Sarah L.</h4>
+                        </div>
+
+                        <div class="min-w-full p-6 rounded-lg flex flex-col items-center justify-center text-center">
+                            <p class="text-lg md:text-2xl max-w-xs md:max-w-md italic">"Outstanding quality and amazing customer support."</p>
+                            <h4 class="mt-2 font-bold">— James W.</h4>
+                        </div>
+
+                        <div class="min-w-full p-6 rounded-lg flex flex-col items-center justify-center text-center">
+                            <p class="text-lg md:text-2xl max-w-xs md:max-w-md italic">"I’ll be coming back for sure. Very impressed!"</p>
+                            <h4 class="mt-2 font-bold">— Emily R.</h4>
+                        </div>
+
+                        <div class="min-w-full p-6 rounded-lg flex flex-col items-center justify-center text-center">
+                            <p class="text-lg md:text-2xl max-w-xs md:max-w-md italic">"I always make a point to visit once am in town!"</p>
+                            <h4 class="mt-2 font-bold">— Sarah L.</h4>
+                        </div>
+
+                        <div class="min-w-full p-6 rounded-lg flex flex-col items-center justify-center text-center">
+                            <p class="text-lg md:text-2xl max-w-xs md:max-w-md italic">"Outstanding quality and amazing customer support!"</p>
+                            <h4 class="mt-2 font-bold">— Scott S.</h4>
+                        </div>
+
+                        <div class="min-w-full p-6 rounded-lg flex flex-col items-center justify-center text-center">
+                            <p class="text-lg md:text-2xl max-w-xs md:max-w-md italic">"Best coffee in Ottawa and the service is top notch. Would highly recommend a visit!"</p>
+                            <h4 class="mt-2 font-bold">— Susie F.</h4>
+                        </div>
                     </div>
-                    <div class="flex flex-col justify-end second bg-white p-6 rounded-lg shadow">
-                        <blockquote class="italic text-white">"Great atmosphere to get some work done while enjoying a cup or two of incredible coffee..."</blockquote>
-                        <p class="mt-2 text-sm text-white">Scott S - Ottawa</p>
-                    </div>
-                    <div class="flex flex-col justify-end third bg-white p-6 rounded-lg shadow">
-                        <blockquote class="italic text-white">"Best coffee in Ottawa and the service is top notch. Would highly recommend a visit."</blockquote>
-                        <p class="mt-2 text-sm text-white">Susie F - Ottawa</p>
-                    </div>
+
+                    <!-- Prev Button -->
+                    <button id="prev-btn" class="absolute top-1/2 -left-3 transform -translate-y-1/2 bg-gray-800 text-white p-2 mx-5 rounded-full hover:bg-gray-700">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+
+                    <!-- Next Button -->
+                    <button id="next-btn" class="absolute top-1/2 -right-3 transform -translate-y-1/2 bg-gray-800 text-white p-2 mx-5 rounded-full hover:bg-gray-700">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action -->
+        <section class="py-20 px-10 text-center">
+            <h2 class="heading-section text-gold mb-4">Join Our Coffee Lovers Club</h2>
+            <p class="mb-6 text-espresso">Get exclusive offers, early menu releases, and a free drink on your birthday!</p>
+            <a href="signup.html" class="btn bg-gold text-espresso hover:bg-gold-dark hover:text-cream">Sign Up Now</a>
+        </section>
     </main>
     
     <!-- Scroll to top button -->
-    <button id="scrollToTop">&#8679;</button>
+    <button id="scrollToTop" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
-<!-- *  * * * * * * * * * * * * * * * * * * * * * * * * * *
-    *                                                 *
-    *             Structuring the Footer              *
-    *           ---------------------------           *
-    *                                                 * 
-    * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-    <footer class="mt-5 py-4 text-center">
-        <p>&copy; My Coffee Company 2024</p>
+    <!-- Footer -->
+    <footer class="footer bg-cream">
+        <p>&copy; My Coffee House 2025</p>
     </footer>
 
-    <!-- Custom JavaScript -->
+    <!-- Custom Script -->
     <script src="js/script.js"></script>
 </body>
 </html>

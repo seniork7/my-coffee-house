@@ -1,88 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Site title -->
-        <title>Checkout | My Coffee House</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | My Coffee House</title>
 
     <!-- Favicon -->
-        <link rel="icon" type="image/x-icon" href="images/favicon.gif">
+    <link rel="icon" type="image/x-icon" href="images/favicon.gif">
 
     <!-- TailwindCSS CDN -->
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
     <!-- Animate.css -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
     <!-- Link CSS file -->
-        <link rel="stylesheet" href="style.css">
-    </head>
-<body class="bg-beige-50 text-gray-900">
-    <!-- *  * * * * * * * * * * * * * * * * * * * * * * * * * *
-    *                                                 *
-    *             Structuring the Header              *
-    *           ---------------------------           *
-    *                                                 * 
-    * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-beige text-espresso">
+    <!-- Skip Links for Accessibility -->
+    <ul id="skip-links">
+        <li><a href="#main-nav">Go to main navigation</a></li>
+        <li><a href="#main-section">Go to main section</a></li>
+    </ul>
+
     <header>
         <!----------------- Nav Bar Start -------------------------->
-        <nav class="bg-white shadow-md fixed w-full z-10">
+        <nav id="main-nav" class="bg-cream shadow-md fixed w-full z-10">
             <div class="container mx-auto flex justify-between items-center p-4">
-                <a href="index.html" class="text-2xl font-bold text-yellow-700">
-                    <img src="images/my-coffee-shop-logo.svg" alt="This is the coffee shop logo" width="200px">
+                <a href="index.html" class="text-2xl font-bold text-gold heading-main">
+                    <img src="images/my-coffee-shop-logo.svg" alt="This is the coffee shop logo" class="w-32 md:w-48">
                 </a>
                 <div class="flex gap-20">
                     <ul class="hidden md:flex space-x-6">
-                        <li><a href="index.html" class="hover:text-yellow-600">Home</a></li>
-                        <li><a href="about.html" class="hover:text-yellow-600">About</a></li>
-                        <li><a href="menu.html" class="hover:text-yellow-600">Menu</a></li>
-                        <li><a href="blog.html" class="hover:text-yellow-600">Blog</a></li>
-                        <li><a href="contact.html" class="hover:text-yellow-600">Contact</a></li>
+                        <li><a href="index.html" class="link">Home</a></li>
+                        <li><a href="about.html" class="link">About</a></li>
+                        <li><a href="menu.html" class="link">Menu</a></li>
+                        <li><a href="blog.html" class="link">Blog</a></li>
+                        <li><a href="contact.html" class="link">Contact</a></li>
                     </ul>
-    
-                    <a href="checkout.html" class="relative ">
+                    <a href="checkout.html" class="relative link">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <span id="cart-count" class="hidden absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"></span>
                     </a>
                 </div>
-                <div class="md:hidden">
-                    <button id="nav-toggle">&#9776;</button>
+                <div class="md:hidden navbar-toggler">
+                    <button id="nav-toggle"><i class="fa-solid fa-bars text-gold text-xl"></i></button>
                 </div>
             </div>
             <ul id="nav-menu" class="hidden bg-white md:hidden">
-                <li><a href="index.html" class="block p-2">Home</a></li>
-                <li><a href="about.html" class="block p-2">About</a></li>
-                <li><a href="menu.html" class="block p-2">Menu</a></li>
-                <li><a href="blog.html" class="block p-2">Blog</a></li>
-                <li><a href="contact.html" class="block p-2">Contact</a></li>
+                <li><a href="index.html" class="block p-2 link">Home</a></li>
+                <li><a href="about.html" class="block p-2 link">About</a></li>
+                <li><a href="menu.html" class="block p-2 link">Menu</a></li>
+                <li><a href="blog.html" class="block p-2 link">Blog</a></li>
+                <li><a href="contact.html" class="block p-2 link">Contact</a></li>
             </ul>
         </nav>
         <!----------------- Nav Bar End -------------------------->
     </header>
-    <main>
-        <div class="container mx-auto md:w-1/2 p-6">
-            <h2 class="text-3xl font-bold mt-20 mb-6">Checkout</h2>
-            <div id="cartItems" class="space-y-4"></div>
-            <button id="clearCart" class="mt-4 px-6 py-2 bg-red-500 text-white rounded">Clear Cart</button>
-            <button id="placeOrder" class="mt-4 ml-2 px-6 py-2 bg-green-600 text-white rounded">Place Order</button>
+
+    <main id="main-section" class="pt-40 pb-20 min-h-screen flex flex-col items-center justify-center">
+        <div class="bg-cream rounded-xl shadow-lg p-10 w-full max-w-2xl animate__animated animate__fadeIn">
+            <h1 class="heading-main text-center mb-8">Checkout</h1>
+            <div id="cartItems" class="space-y-6 mb-8"></div>
+            <div class="flex flex-col md:flex-row md:justify-between gap-4">
+                <button id="clearCart" class="btn bg-red-500 text-white hover:bg-red-600">Clear Cart</button>
+                <button id="placeOrder" class="btn bg-gold text-espresso hover:bg-gold-dark hover:text-cream">Place Order</button>
+            </div>
         </div>
         <!-- Overlay popup -->
-        <div id="orderOverlay" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center">
-            <div class="bg-white p-6 rounded-lg max-w-md text-center animate__animated animate__fadeIn">
+        <div id="orderOverlay" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+            <div class="bg-cream p-8 rounded-lg max-w-md text-center animate__animated animate__fadeIn">
                 <div id="popup">
-                    <h3 class="text-2xl font-bold mb-4">Order Placed!</h3>
+                    <h3 class="heading-section mb-4">Order Placed!</h3>
                     <div id="orderSummary" class="mb-4"></div>
                 </div>
-                <button id="goToMenu" class="px-4 py-2 bg-yellow-600 text-white rounded">Back to Menu</button>
+                <button id="goToMenu" class="btn bg-gold text-espresso hover:bg-gold-dark hover:text-cream">Back to Menu</button>
             </div>
         </div>
     </main>
-    
+
+    <!-- Scroll to top button -->
+    <button id="scrollToTop" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <footer class="footer bg-cream">
+        <p>&copy; My Coffee House 2025</p>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
 </body>
-<!-- Custom JavaScript -->
-<script src="js/script.js"></script>
 </html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Lovers Club Blog | My Coffee House</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.gif">
+
+    <!-- TailwindCSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Link CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-beige text-espresso">
+    <!-- Skip Links for Accessibility -->
+    <ul id="skip-links">
+        <li><a href="#main-nav">Go to main navigation</a></li>
+        <li><a href="#main-section">Go to main section</a></li>
+    </ul>
+
+    <header>
+        <!----------------- Nav Bar Start -------------------------->
+        <nav id="main-nav" class="bg-cream shadow-md fixed w-full z-10">
+            <div class="container mx-auto flex justify-between items-center p-4">
+                <a href="index.html" class="text-2xl font-bold text-gold heading-main">
+                    <img src="images/my-coffee-shop-logo.svg" alt="This is the coffee shop logo" class="w-32 md:w-48">
+                </a>
+                <div class="flex gap-20">
+                    <ul class="hidden md:flex space-x-6">
+                        <li><a href="index.html" class="link">Home</a></li>
+                        <li><a href="about.html" class="link">About</a></li>
+                        <li><a href="menu.html" class="link">Menu</a></li>
+                        <li><a href="blog.html" class="link">Blog</a></li>
+                        <li><a href="contact.html" class="link">Contact</a></li>
+                    </ul>
+                    <a href="checkout.html" class="relative link">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart-count" class="hidden absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"></span>
+                    </a>
+                </div>
+                <div class="md:hidden navbar-toggler">
+                    <button id="nav-toggle"><i class="fa-solid fa-bars text-gold text-xl"></i></button>
+                </div>
+            </div>
+            <ul id="nav-menu" class="hidden bg-white md:hidden">
+                <li><a href="index.html" class="block p-2 link">Home</a></li>
+                <li><a href="about.html" class="block p-2 link">About</a></li>
+                <li><a href="menu.html" class="block p-2 link">Menu</a></li>
+                <li><a href="blog.html" class="block p-2 link">Blog</a></li>
+                <li><a href="contact.html" class="block p-2 link">Contact</a></li>
+            </ul>
+        </nav>
+        <!----------------- Nav Bar End -------------------------->
+    </header>
+
+    <main id="main-section">
+        <!-- Blog Hero Banner -->
+        <div id="blog-banner" class="relative">
+            <div class="flex flex-col items-center justify-center gap-5 w-full h-full pt-20 pb-10">
+                <h1 class="heading-main max-w-xs md:max-w-2xl text-beige text-center animate__animated animate__fadeInDown">
+                    Coffee Lovers Club
+                </h1>
+                <p class="banner-quote text-beige text-center max-w-xs md:max-w-2xl px-4 animate__animated animate__fadeInDown">
+                    for every coffee enthusiast
+                </p>
+                <a href="#latest" class="btn pb-20 animate__animated animate__bounceIn">Latest Posts</a>
+            </div>
+        </div>
+
+        <!-- Blog Posts Section -->
+        <section id="latest" class="bg-gold py-20 px-6">
+            <div class="md:container mx-auto">
+                <h2 class="heading-section text-center pb-8">Latest from the Club</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <!-- Blog Post 1 -->
+                    <article class="card flex flex-col animate__animated animate__fadeInUp">
+                        <img src="images/coffee-taste.jpg" alt="Coffee Tasting" class="rounded mb-4 h-48 object-cover">
+                        <h3 class="text-xl font-bold mb-2">How to Taste Coffee Like a Pro</h3>
+                        <p class="mb-4">Unlock the secrets of coffee cupping and learn how to identify flavors, aromas, and textures in your daily brew.</p>
+                        <a href="#" class="link font-bold mt-auto">Read More <i class="fa fa-arrow-right"></i></a>
+                    </article>
+                    <!-- Blog Post 2 -->
+                    <article class="card flex flex-col animate__animated animate__fadeInUp" style="animation-delay:0.1s;">
+                        <img src="images/home-brew.jpg" alt="Home Brewing" class="rounded mb-4 h-48 object-cover">
+                        <h3 class="text-xl font-bold mb-2">Home Brewing Tips</h3>
+                        <p class="mb-4">Discover easy tips and tricks to elevate your home coffee brewing game, from grind size to water temperature.</p>
+                        <a href="#" class="link font-bold mt-auto">Read More <i class="fa fa-arrow-right"></i></a>
+                    </article>
+                    <!-- Blog Post 3 -->
+                    <article class="card flex flex-col animate__animated animate__fadeInUp" style="animation-delay:0.2s;">
+                        <img src="images/coffee-community.jpg" alt="Coffee Community" class="rounded mb-4 h-48 object-cover">
+                        <h3 class="text-xl font-bold mb-2">Building a Coffee Community</h3>
+                        <p class="mb-4">See how our Coffee Lovers Club brings people together, supports local causes, and celebrates the love of coffee.</p>
+                        <a href="#" class="link font-bold mt-auto">Read More <i class="fa fa-arrow-right"></i></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Section -->
+        <section class="bg-beige py-20 px-6">
+            <div class="mx-auto max-w-4xl">
+                <h2 class="heading-section text-center pb-8">Members Stories</h2>
+                <div class="space-y-8">
+                    <div class="bg-cream rounded-lg shadow-md p-8 flex flex-col md:flex-row gap-8 items-center">
+                        <img src="images/testimonial-1.jpeg" alt="Member Story" class="rounded-full w-32 h-32 object-cover">
+                        <div>
+                            <h3 class="text-lg font-bold mb-2">Sarah's Journey to the Perfect Brew</h3>
+                            <p class="md:max-w-lg">"Joining the Coffee Lovers Club introduced me to new flavors and friends. Now, my mornings are brighter and my coffee is always just right!"</p>
+                        </div>
+                    </div>
+                    <div class="bg-cream rounded-lg shadow-md p-8 flex flex-col md:flex-row gap-8 items-center">
+                        <img src="images/testimonial-2.jpeg" alt="Member Story" class="rounded-full w-32 h-32 object-cover">
+                        <div>
+                            <h3 class="text-lg font-bold mb-2">Alex's Latte Art Adventure</h3>
+                            <p class="md:max-w-lg">"I never thought I could make latte art at home, but the club's workshops made it fun and easy. Now I impress my friends every weekend!"</p>
+                        </div>
+                    </div>
+                    <div class="bg-cream rounded-lg shadow-md p-8 flex flex-col md:flex-row gap-8 items-center">
+                        <img src="images/testimonial-3.jpeg" alt="Member Story" class="rounded-full w-32 h-32 object-cover">
+                        <div>
+                            <h3 class="text-lg font-bold mb-2">Priya's Coffee & Community</h3>
+                            <p class="md:max-w-lg">"The Coffee Lovers Club helped me connect with fellow coffee fans and discover new ways to brew at home. The sense of community is truly special!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="py-20 px-10 text-center bg-gold">
+            <h2 class="heading-section text-gold mb-4">Join the Coffee Lovers Club</h2>
+            <p class="mb-6 text-espresso">Get exclusive blog updates, member perks, and a free drink on your birthday!</p>
+            <a href="signup.html" class="btn bg-gold text-espresso hover:bg-gold-dark hover:text-cream">Sign Up Now</a>
+        </section>
+    </main>
+
+    <!-- Scroll to top button -->
+    <button id="scrollToTop" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <footer class="footer bg-cream">
+        <p>&copy; My Coffee House 2025</p>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
