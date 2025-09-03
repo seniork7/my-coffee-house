@@ -1,8 +1,8 @@
 /********************* HAMBURGER MENU ********************/
 
 // make the hamburger menu functional
-  const navToggle = document.getElementById('nav-toggle');
-  const navMenu = document.getElementById('nav-menu');
+const navToggle = document.getElementById('nav-toggle');
+const navMenu = document.getElementById('nav-menu');
 if(navToggle) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.toggle('hidden');
@@ -144,7 +144,7 @@ const dietaryOptions = [
         id: 17,
         name: 'Low‑Carb Muffins',
         price: 3.25,
-        description: 'Satisfying muffins made with almond flour and sweetener.',
+        description: 'Satisfying muffins made with almond flour and sweetener for low-carb.',
         image: 'https://images.unsplash.com/photo-1634391036491-1ff328919d33?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8TG93JUUyJTgwJTkxQ2FyYiUyME11ZmZpbnN8ZW58MHx8MHx8fDA%3D'
     }
 ];
@@ -213,19 +213,19 @@ function createMenu(items, sectionId) {
         const card = document.createElement('div');
 
         // add classes to the card
-        card.className = 'p-4 border rounded search-item flex flex-col overflow-hidden shadow-md';
+        card.className = 'bg-beige p-4 border rounded search-item flex flex-col overflow-hidden shadow-md';
 
         // add a data- attribute with the name for each item
         card.dataset.name = item.name;
 
         // create the html template for each item
         card.innerHTML = `
-            <div class="flex flex-col">
+            <div class="flex flex-col gap-2">
                 <img src="${item.image || 'https://source.unsplash.com/400x300/?coffee'}" alt="${item.name}" class="w-full h-48 object-cover mb-3 rounded">
                 <h4 class="font-semibold text-lg mb-1">${item.name}</h4>
-                <p class="text-sm mb-2">${item.description || 'No description available.'}</p>
+                <p class="text-sm md:max-w-sm mb-2">${item.description || 'No description available.'}</p>
                 <p class="font-bold mb-2">$${item.price.toFixed(2)}</p>
-                <button class="mt-auto self-start px-5 py-2 bg-yellow-600 text-white transition-all transform hover:scale-95 hover:bg-yellow-700 rounded-full" data-id="${item.id}">Add to Cart</button>
+                <button class="mt-auto self-start justify-self-end px-5 py-2 bg-yellow-600 text-white transition-all transform hover:scale-95 hover:bg-yellow-700 rounded-full" data-id="${item.id}">Add to Cart</button>
             </div>`;
 
         // add the div to the page
@@ -313,7 +313,7 @@ function createCheckout() {
         // create a button to remove item from cart
         div.innerHTML = `
             <span>${item.quantity} ${menuItem.name} = $${(menuItem.price * item.quantity).toFixed(2)}</span>
-            <button class="px-6 py-2 bg-red-500 text-white rounded " data-index="${index}">Remove</button>
+            <button class="px-6 py-2 bg-red-500 text-white rounded transition-colors duration-200 hover:bg-red-700 focus:bg-red-700" data-index="${index}">Remove</button>
         `;
 
         // add the div to the page
@@ -467,3 +467,101 @@ if(document.getElementById('searchInput')) {
         });
     });
 }
+
+/********************* TESTIMONIAL CAROUSEL ********************/
+
+// get the container that holds the testimonials
+const carousel = document.getElementById("testimonial-carousel");
+
+// get the left (previous) button
+const prevBtn = document.getElementById("prev-btn");
+
+// get the right (next) button
+const nextBtn = document.getElementById("next-btn");
+
+if(carousel) {
+    // index will track which slide is currently visible
+    let index = 0;
+    
+    // totalSlides counts how many testimonial items exist inside the carousel
+    const totalSlides = carousel.children.length;
+
+    // autoPlayInterval will store the setInterval reference so autoplay can stop/start
+    let autoPlayInterval;
+
+    // this function change the position of the carousel slides
+    function updateCarousel() {
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    // this function move to the carousel to the next slide
+    function nextSlide() {
+        //   increase "index" by 1 to move forward
+        //   the "%" (modulus) makes sure that if we pass the last slide,
+        //   it loops back to 0 (first slide)
+        index = (index + 1) % totalSlides;
+        
+        // update the position of the carousel
+        updateCarousel();
+    }
+    
+    
+    // this function move to the carousel to the next slide
+    function prevSlide() {
+        //   decrease "index" by 1 to move backwards
+        //   adding totalSlides before modulus ensures the result is never negative
+        index = (index - 1 + totalSlides) % totalSlides;
+
+        // update the visual position of the carousel
+        updateCarousel();
+    }
+
+    // this function starts the autoplay
+    function startAutoPlay() {
+        autoPlayInterval = setInterval(nextSlide, 5000);
+    }
+
+    // this function stops the autoplay
+    function stopAutoPlay() {
+        clearInterval(autoPlayInterval);
+    }
+
+    // add event listeners to buttons
+    nextBtn.addEventListener("click", () => {
+        nextSlide();       
+        stopAutoPlay();    
+        startAutoPlay();   
+    });
+    
+    prevBtn.addEventListener("click", () => {
+        prevSlide();       
+        stopAutoPlay();    
+        startAutoPlay();   
+    });
+    
+    // start the carousel autoplay when the page loads
+    startAutoPlay();
+}
+
+// show/hide scroll to top button
+window.addEventListener('scroll', function() {
+    const scrollBtn = document.getElementById('scrollToTop');
+    if (window.scrollY > 300) {
+    scrollBtn.classList.add('show');
+    } else {
+    scrollBtn.classList.remove('show');
+    }
+});
+
+// scroll to top on click
+document.getElementById('scrollToTop').addEventListener('click', function() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+});
+
+// FAQ accordion toggle
+document.querySelectorAll('.faq-toggle').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const answer = this.nextElementSibling;
+        answer.classList.toggle('hidden');
+    });
+});

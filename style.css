@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
 /* CSS RESET */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -17,168 +19,262 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /********************** CUSTOM CSS *******************/
+body {
+    background: #f5eee6;
+    color: #2d1b0e; 
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
 /* Home Banner Image */
 #home-banner {
-    background: url("images/hero-background.jpg") no-repeat;
-    height: 400px;
-    background-size: cover;
-    background-position: center;
-}
-/* about Banner Image */
-#about-banner {
-    background: url("images/our-story.jpg") no-repeat;
-    height: 400px;
-    background-size: cover;
-    background-position: center;
-}
-/* Menu Banner Image */
-#menu-banner {
-    background: url("images/menu-banner.jpg") no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url("images/hero-background.jpg") no-repeat;
     height: 400px;
     background-size: cover;
     background-position: center;
 }
 
-/* Use absolute to alter the position of the skip links */
+/* About Banner Image */
+#about-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url("images/our-story.jpg") no-repeat;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Menu Banner Image */
+#menu-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url("images/menu-banner.jpg") no-repeat;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Contact Banner Image */
+#contact-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url("images/contact-us.jpg") no-repeat;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Blog Banner Image */
+#blog-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url("images/blog-banner.jpg") no-repeat;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Skip Links */
 #skip-links a{
     position: absolute;
     top: -50px;
     padding: 5px;
     color: white;
 }
-
-/* Reset the postion of the skip links when they are in focus and change the background color */
 #skip-links a:focus{
     top: 0;
     background-color: #d69e3d;
 }
 
-/* ************************* Navbar Toggler Animation Start **************************************** */
-
-/* Remove border from toggler */
-.navbar-toggler {
-    border: 0 !important;
+/* Text and Background Colors */
+.bg-beige {
+    background-color: #f5eee6;
+}
+.bg-gold {
+    background-color: #fff;
+}
+.bg-espresso {
+    background-color: #2d1b0e;
+}
+.bg-cream {
+    background-color: #fffdfa;
+}
+.bg-gold-dark {
+    background-color: #a37c4e;
+}
+.bg-overlay {
+    background: rgba(0,0,0,0.5);
 }
 
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler-icon:focus {
-    outline: none !important;
-    box-shadow: none !important;
-    border: 0 !important;
+.text-espresso {
+    color: #2d1b0e;
+}
+.text-gold {
+    color: #c6a16e;
+}
+.text-gold-dark {
+    color: #a37c4e;
+}
+.text-beige {
+    color: #f5eee6;
+}
+.text-cream {
+    color: #fffdfa;
 }
 
-/* Lines of the Toggler */
-.toggler-icon{
-    width: 30px;
-    height: 3px;
-    background-color: #f3f0e9;
+/* Main Headings */
+h1, h2, h3,
+.heading-main,
+.heading-section,
+.banner-quote {
+    font-family: 'Playfair Display', serif;
+}
+
+.link, nav, footer, button, .btn, .card, p, li, a:not(.heading-main):not(.heading-section):not(.banner-quote) {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.heading-main,
+.heading-section {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.heading-section {
+    color: #c6a16e;
+}
+
+/* Links */
+.link {
+    color: #c6a16e;
+    transition: color 0.2s;
+    text-decoration: none;
+}
+.link:hover, .link:focus {
+    color: #a37c4e;
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+    background: #c6a16e;
+    color: #2d1b0e;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    font-weight: bold;
+    transition: all 0.2s, color 0.2s;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+}
+.btn:hover, .btn:focus {
+    background: #a37c4e;
+    color: #fffdfa;
+}
+
+/* Card/Box */
+.card {
+    background: #fffdfa;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(45,27,14,0.08);
+    padding: 2rem;
+    transition: box-shadow 0.2s;
+}
+.card:hover {
+    box-shadow: 0 4px 16px rgba(45,27,14,0.16);
+}
+
+/* Footer */
+.footer {
+    color: #2d1b0e;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Scroll to top button */
+#scrollToTop {
+    background: #c6a16e;
+    color: #fffdfa;
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem 0.7rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    box-shadow: 0 2px 8px rgba(45,27,14,0.15);
+    cursor: pointer;
+    z-index: 50;
+    transition: all 0.2s ease-in-out;
+    font-size: 1.5rem;
+    display: none;
+}
+
+#scrollToTop.show {
     display: block;
-    transition: all 0.2s;
 }
 
-/* Adds Space between the lines */
-.middle-bar{
-    margin: 5px auto;
+#scrollToTop:hover {
+    background: #a37c4e;
 }
 
-/* State when navbar is opened (START) */
-.navbar-toggler .top-bar {
-    transform: rotate(45deg);
-    transform-origin: 10% 10%;
+/* Banner Quote Styles */
+.banner-quote {
+    font-style: italic;
+    color: #f5eee6;
+    position: relative;
 }
-
-.navbar-toggler .middle-bar {
-    opacity: 0;
-    filter: alpha(opacity=0);
+.banner-quote::before, .banner-quote::after {
+    color: #c6a16e;
+    font-family: serif;
+    vertical-align: top;
 }
-
-.navbar-toggler .bottom-bar {
-    transform: rotate(-45deg);
-    transform-origin: 10% 90%;
+.banner-quote::before {
+    content: "“";
 }
-/* State when navbar is opened (END) */
-
-/* State when navbar is collapsed (START) */
-.navbar-toggler.collapsed .top-bar {
-    transform: rotate(0);
+.banner-quote::after {
+    content: "”";
 }
-
-.navbar-toggler.collapsed .middle-bar {
-    opacity: 1;
-    filter: alpha(opacity=100);
-}
-
-.navbar-toggler.collapsed .bottom-bar {
-    transform: rotate(0);
-}
-/* State when navbar is collapsed (END) */
-
-/* Color of Toggler when collapsed */
-.navbar-toggler.collapsed .toggler-icon {
-    background-color: rgb(214, 158, 61);
-}
-
-/* Background img for testimonials */
-.first {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url("../images/testimonial-1.jpg");
-    background-size: cover;
-    background-position: top;
-    height: 300px;
-}
-
-.second {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.75)), url("../images/testimonial-2.jpeg");
-    background-size: cover;
-    background-position: top;
-    height: 300px;
-}
-
-.third {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75)), url("../images/testimonial-3.jpeg");
-    background-size: cover;
-    background-position: top;
-    height: 300px;
-}
-
-/* ************************* Navbar Toggler Animation End **************************************** */
 
 @media screen and (min-width: 760px) {
     #home-banner,
     #about-banner,
-    #menu-banner {
+    #menu-banner,
+    #contact-banner,
+    #blog-banner {
         height: 900px;
+    }
+    .heading-main {
+        font-size: 3.5rem;
+    }
+    .banner-quote {
+        font-size: 1.5rem;
+    }
+    .banner-quote::before, .banner-quote::after {
+        font-size: 2rem;
     }
 }

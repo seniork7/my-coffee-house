@@ -1,112 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Coffee House</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.gif">
+    <link rel="icon" type="image/x-icon" href="images/favicon.gif" />
 
     <!-- TailwindCSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
 
     <!-- Link CSS file -->
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body class="bg-gold">
+  <body class="bg-gold">
     <!-- Skip Links for Accessibility -->
     <ul id="skip-links">
-        <li><a href="#main-nav">Go to main navigation</a></li>
-        <li><a href="#main-section">Go to main section</a></li>
+      <li><a href="#main-nav">Go to main navigation</a></li>
+      <li><a href="#main-section">Go to main section</a></li>
     </ul>
 
     <header>
-        <!----------------- Nav Bar Start -------------------------->
-        <nav id="main-nav" class="bg-cream shadow-md fixed w-full z-10">
-            <div class="container mx-auto flex justify-between items-center p-4">
-                <a href="index.html" class="text-2xl font-bold text-gold heading-main">
-                    <img src="images/my-coffee-shop-logo.svg" alt="This is the coffee shop logo" class="w-32 md:w-48">
-                </a>
-                <div class="flex gap-20">
-                    <ul class="hidden md:flex space-x-6">
-                        <li><a href="index.html" class="link">Home</a></li>
-                        <li><a href="about.html" class="link">About</a></li>
-                        <li><a href="menu.html" class="link">Menu</a></li>
-                        <li><a href="blog.html" class="link">Blog</a></li>
-                        <li><a href="contact.html" class="link">Contact</a></li>
-                    </ul>
-                    <a href="checkout.html" class="relative link">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span id="cart-count" class="hidden absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"></span>
-                    </a>
-                </div>
-                <div class="md:hidden navbar-toggler">
-                    <button id="nav-toggle"><i class="fa-solid fa-bars text-gold text-xl"></i></button>
-                </div>
-            </div>
-            <ul id="nav-menu" class="hidden bg-white md:hidden">
-                <li><a href="index.html" class="block p-2 link">Home</a></li>
-                <li><a href="about.html" class="block p-2 link">About</a></li>
-                <li><a href="menu.html" class="block p-2 link">Menu</a></li>
-                <li><a href="blog.html" class="block p-2 link">Blog</a></li>
-                <li><a href="contact.html" class="block p-2 link">Contact</a></li>
+      <!----------------- Nav Bar Start -------------------------->
+      <nav id="main-nav" class="bg-cream shadow-md fixed w-full z-10">
+        <div class="container mx-auto flex justify-between items-center p-4">
+          <a
+            href="index.html"
+            class="text-2xl font-bold text-gold heading-main"
+          >
+            <img
+              src="images/my-coffee-shop-logo.svg"
+              alt="This is the coffee shop logo"
+              class="w-32 md:w-48"
+            />
+          </a>
+          <div class="flex gap-20">
+            <ul class="hidden md:flex space-x-6">
+              <li><a href="index.html" class="link">Home</a></li>
+              <li><a href="about.html" class="link">About</a></li>
+              <li><a href="menu.html" class="link">Menu</a></li>
+              <li><a href="blog.html" class="link">Blog</a></li>
+              <li><a href="contact.html" class="link">Contact</a></li>
             </ul>
-        </nav>
-        <!----------------- Nav Bar End -------------------------->
+            <a href="checkout.html" class="relative link">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span
+                id="cart-count"
+                class="hidden absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
+              ></span>
+            </a>
+          </div>
+          <div class="md:hidden navbar-toggler">
+            <button id="nav-toggle">
+              <i class="fa-solid fa-bars text-gold text-xl"></i>
+            </button>
+          </div>
+        </div>
+        <ul id="nav-menu" class="hidden bg-white md:hidden p-4">
+          <li><a href="index.html" class="block p-2 link">Home</a></li>
+          <li><a href="about.html" class="block p-2 link">About</a></li>
+          <li><a href="menu.html" class="block p-2 link">Menu</a></li>
+          <li><a href="blog.html" class="block p-2 link">Blog</a></li>
+          <li><a href="contact.html" class="block p-2 link">Contact</a></li>
+        </ul>
+      </nav>
+      <!----------------- Nav Bar End -------------------------->
     </header>
 
     <main id="main-section">
-        <!-- Menu Hero Banner -->
-        <div id="menu-banner">
-            <div class="flex flex-col items-center justify-center gap-5 w-full h-full pt-20">
-                <h1 class="heading-main max-w-xs md:max-w-2xl text-beige text-center animate__animated animate__fadeInDown">
-                    Our Menu
-                </h1>
-                <p class="banner-quote text-beige text-center max-w-xs md:max-w-2xl px-4 animate__animated animate__fadeInDown">
-                    Discover your new favorite, crafted with love and the finest ingredients.
-                </p>
-                <a href="about.html" class="btn pb-20 animate__animated animate__bounceIn">Our Story</a>
-            </div>
+      <!-- Menu Hero Banner -->
+      <div id="menu-banner">
+        <div
+          class="flex flex-col items-center justify-center gap-5 w-full h-full pt-20"
+        >
+          <h1
+            class="heading-main max-w-xs md:max-w-2xl text-beige text-center animate__animated animate__fadeInDown"
+          >
+            Our Menu
+          </h1>
+          <p
+            class="banner-quote text-beige text-center max-w-xs md:max-w-2xl px-4 animate__animated animate__fadeInDown"
+          >
+            Discover your new favorite, crafted with love and the finest
+            ingredients.
+          </p>
+          <a
+            href="about.html"
+            class="btn pb-20 animate__animated animate__bounceIn"
+            >Our Story</a
+          >
         </div>
+      </div>
 
-        <div id="menuItems" class="flex flex-col items-center justify-center container mx-auto mt-8 p-6">
-            <!-- Menu Options -->
-            <section class="flex flex-col items-center justify-center w-full">
-                <h2 class="heading-section text-center pb-5">Menu Options</h2>
-                <input type="text" id="searchInput" placeholder="Search items…" class="border p-2 mb-4 w-full md:w-1/2 rounded" />
-                <div id="mainMenu" class="grid content-center grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 mt-10 p-6 w-full"></div>
-            </section>
+      <div
+        id="menuItems"
+        class="flex flex-col items-center justify-center container mx-auto mt-8 p-6"
+      >
+        <!-- Menu Options -->
+        <section class="flex flex-col items-center justify-center w-full">
+          <h2 class="heading-section text-center pb-5">Menu Options</h2>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search items…"
+            class="border p-2 mb-4 w-full md:w-1/2 rounded"
+          />
+          <div
+            id="mainMenu"
+            class="grid content-center grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 mt-10 p-6 w-full"
+          ></div>
+        </section>
 
-            <!-- Specials and Offers -->
-            <section class="flex flex-col items-center justify-center mt-20 p-6 w-full">
-                <h2 class="heading-section text-center pb-5">Seasonal Specials</h2>
-                <div id="seasonalSection" class="grid content-center grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 w-full"></div>
-            </section>
+        <!-- Specials and Offers -->
+        <section
+          class="flex flex-col items-center justify-center mt-20 p-6 w-full"
+        >
+          <h2 class="heading-section text-center pb-5">Seasonal Specials</h2>
+          <div
+            id="seasonalSection"
+            class="grid content-center grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 w-full"
+          ></div>
+        </section>
 
-            <!-- Dietary Section -->
-            <section class="flex flex-col items-center justify-center mt-20 p-6 w-full">
-                <h2 class="heading-section text-center pb-5">Dietary Options</h2>
-                <div id="dietarySection" class="grid content-center grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 w-full"></div>
-            </section>
-        </div>
+        <!-- Dietary Section -->
+        <section
+          class="flex flex-col items-center justify-center mt-20 p-6 w-full"
+        >
+          <h2 class="heading-section text-center pb-5">Dietary Options</h2>
+          <div
+            id="dietarySection"
+            class="grid content-center grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 w-full"
+          ></div>
+        </section>
+      </div>
     </main>
 
     <!-- Scroll to top button -->
-    <button id="scrollToTop" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <button id="scrollToTop" title="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <footer class="footer bg-cream">
-        <p>&copy; My Coffee House 2025</p>
+      <p>&copy; My Coffee House 2025</p>
     </footer>
 
     <!-- Custom JavaScript -->
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>

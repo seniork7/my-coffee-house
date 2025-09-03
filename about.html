@@ -1,198 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Coffee House</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.gif">
+    <link rel="icon" type="image/x-icon" href="images/favicon.gif" />
 
     <!-- TailwindCSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
 
     <!-- Link CSS file -->
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body class="bg-beige">
+  <body class="bg-beige">
     <!-- Skip Links for Accessibility -->
     <ul id="skip-links">
-        <li><a href="#main-nav">Go to main navigation</a></li>
-        <li><a href="#main-section">Go to main section</a></li>
+      <li><a href="#main-nav">Go to main navigation</a></li>
+      <li><a href="#main-section">Go to main section</a></li>
     </ul>
 
     <header>
-        <!----------------- Nav Bar Start -------------------------->
-        <nav id="main-nav" class="bg-cream shadow-md fixed w-full z-10">
-            <div class="container mx-auto flex justify-between items-center p-4">
-                <a href="index.html" class="text-2xl font-bold text-gold heading-main">
-                    <img src="images/my-coffee-shop-logo.svg" alt="This is the coffee shop logo" class="w-32 md:w-48">
-                </a>
-                <div class="flex gap-20">
-                    <ul class="hidden md:flex space-x-6">
-                        <li><a href="index.html" class="link">Home</a></li>
-                        <li><a href="about.html" class="link">About</a></li>
-                        <li><a href="menu.html" class="link">Menu</a></li>
-                        <li><a href="blog.html" class="link">Blog</a></li>
-                        <li><a href="contact.html" class="link">Contact</a></li>
-                    </ul>
-                    <a href="checkout.html" class="relative link">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span id="cart-count" class="hidden absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"></span>
-                    </a>
-                </div>
-                <div class="md:hidden navbar-toggler">
-                    <button id="nav-toggle"><i class="fa-solid fa-bars text-gold text-xl"></i></button>
-                </div>
-            </div>
-            <ul id="nav-menu" class="hidden bg-white md:hidden">
-                <li><a href="index.html" class="block p-2 link">Home</a></li>
-                <li><a href="about.html" class="block p-2 link">About</a></li>
-                <li><a href="menu.html" class="block p-2 link">Menu</a></li>
-                <li><a href="blog.html" class="block p-2 link">Blog</a></li>
-                <li><a href="contact.html" class="block p-2 link">Contact</a></li>
+      <!----------------- Nav Bar Start -------------------------->
+      <nav id="main-nav" class="bg-cream shadow-md fixed w-full z-10">
+        <div class="container mx-auto flex justify-between items-center p-4">
+          <a
+            href="index.html"
+            class="text-2xl font-bold text-gold heading-main"
+          >
+            <img
+              src="images/my-coffee-shop-logo.svg"
+              alt="This is the coffee shop logo"
+              class="w-32 md:w-48"
+            />
+          </a>
+          <div class="flex gap-20">
+            <ul class="hidden md:flex space-x-6">
+              <li><a href="index.html" class="link">Home</a></li>
+              <li><a href="about.html" class="link">About</a></li>
+              <li><a href="menu.html" class="link">Menu</a></li>
+              <li><a href="blog.html" class="link">Blog</a></li>
+              <li><a href="contact.html" class="link">Contact</a></li>
             </ul>
-        </nav>
-        <!----------------- Nav Bar End -------------------------->
+            <a href="checkout.html" class="relative link">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span
+                id="cart-count"
+                class="hidden absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
+              ></span>
+            </a>
+          </div>
+          <div class="md:hidden navbar-toggler">
+            <button id="nav-toggle">
+              <i class="fa-solid fa-bars text-gold text-xl"></i>
+            </button>
+          </div>
+        </div>
+        <ul id="nav-menu" class="hidden bg-white md:hidden p-4">
+          <li><a href="index.html" class="block p-2 link">Home</a></li>
+          <li><a href="about.html" class="block p-2 link">About</a></li>
+          <li><a href="menu.html" class="block p-2 link">Menu</a></li>
+          <li><a href="blog.html" class="block p-2 link">Blog</a></li>
+          <li><a href="contact.html" class="block p-2 link">Contact</a></li>
+        </ul>
+      </nav>
+      <!----------------- Nav Bar End -------------------------->
     </header>
 
     <main id="main-section">
-        <!-- About Hero Banner -->
-        <div id="about-banner">
-            <div class="flex flex-col items-center justify-center gap-5 w-full h-full pt-20">
-                <h1 class="heading-main max-w-xs md:max-w-2xl text-beige text-center animate__animated animate__fadeInDown">
-                    Our Story
-                </h1>
-                <p class="banner-quote text-beige text-center max-w-xs md:max-w-2xl px-4 animate__animated animate__fadeInDown">
-                    A journey of passion, quality, and community that brings people together over coffee.
-                </p>
-                <a href="#mission" class="btn pb-20 animate__animated animate__bounceIn">Explore More</a>
-            </div>
+      <!-- About Hero Banner -->
+      <div id="about-banner">
+        <div
+          class="flex flex-col items-center justify-center gap-5 w-full h-full pt-20"
+        >
+          <h1
+            class="heading-main max-w-xs md:max-w-2xl text-beige text-center animate__animated animate__fadeInDown"
+          >
+            Our Story
+          </h1>
+          <p
+            class="banner-quote text-beige text-center max-w-xs md:max-w-2xl px-4 animate__animated animate__fadeInDown"
+          >
+            A journey of passion, quality, and community that brings people
+            together over coffee.
+          </p>
+          <a
+            href="#mission"
+            class="btn pb-20 animate__animated animate__bounceIn"
+            >Explore More</a
+          >
         </div>
+      </div>
 
-        <!-- Mission Section -->
-        <section id="mission" class="bg-gold">
-            <div class="flex flex-col items-center justify-center mx-auto md:container py-20 px-10">
-                <h2 class="heading-section text-center pb-5">Our Mission</h2>
-                <p class="text-center max-w-2xl mb-4">Welcome to My Coffee House, where every cup tells a story. Since our founding, we have been committed to offering more than just coffee. We strive to create a welcoming environment where connections are made, and memories are brewed.</p>
-                <p class="text-center max-w-2xl">Our mission is to deliver an exceptional coffee experience that blends sustainability, community, and quality. We aim to be the heart of the neighborhood, where locals gather, friends meet, and creativity thrives.</p>
+      <!-- Mission Section -->
+      <section id="mission" class="bg-gold">
+        <div
+          class="flex flex-col items-center justify-center mx-auto md:container py-20 px-10"
+        >
+          <h2 class="heading-section text-center pb-5">Our Mission</h2>
+          <p class="text-center max-w-2xl mb-4">
+            Welcome to My Coffee House, where every cup tells a story. Since our
+            founding, we have been committed to offering more than just coffee.
+            We strive to create a welcoming environment where connections are
+            made, and memories are brewed.
+          </p>
+          <p class="text-center max-w-2xl">
+            Our mission is to deliver an exceptional coffee experience that
+            blends sustainability, community, and quality. We aim to be the
+            heart of the neighborhood, where locals gather, friends meet, and
+            creativity thrives.
+          </p>
+        </div>
+      </section>
+
+      <!-- Our Values Section -->
+      <section class="bg-beige">
+        <div
+          class="flex flex-col items-center justify-center mx-auto md:container py-20 px-10"
+        >
+          <h2 class="heading-section text-center pb-5">Our Values</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-20">
+            <div class="card flex flex-col items-center text-center">
+              <i class="fa fa-leaf fa-3x text-gold mb-3"></i>
+              <h3 class="text-lg mb-2">Quality</h3>
+              <p class="max-w-xs">
+                We use only the finest, sustainably sourced ingredients to craft
+                every cup and bite.
+              </p>
             </div>
-        </section>
-
-        <!-- Our Values Section -->
-        <section class="bg-beige">
-            <div class="flex flex-col items-center justify-center mx-auto md:container py-20 px-10">
-                <h2 class="heading-section text-center pb-5">Our Values</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-20">
-                    <div class="card flex flex-col items-center text-center">
-                        <i class="fa fa-leaf fa-3x text-gold mb-3"></i>
-                        <h3 class="text-lg mb-2">Quality</h3>
-                        <p class="max-w-xs">We use only the finest, sustainably sourced ingredients to craft every cup and bite.</p>
-                    </div>
-                    <div class="card flex flex-col items-center text-center">
-                        <i class="fa fa-handshake fa-3x text-gold mb-3"></i>
-                        <h3 class="text-lg mb-2">Community</h3>
-                        <p class="max-w-xs">We strive to be a place where everyone feels welcome and valued.</p>
-                    </div>
-                    <div class="card flex flex-col items-center text-center">
-                        <i class="fa fa-seedling fa-3x text-gold mb-3"></i>
-                        <h3 class="text-lg mb-2">Sustainability</h3>
-                        <p class="max-w-xs">We are committed to eco-friendly practices and reducing our environmental footprint.</p>
-                    </div>
-                </div>
+            <div class="card flex flex-col items-center text-center">
+              <i class="fa fa-handshake fa-3x text-gold mb-3"></i>
+              <h3 class="text-lg mb-2">Community</h3>
+              <p class="max-w-xs">
+                We strive to be a place where everyone feels welcome and valued.
+              </p>
             </div>
-        </section>
-
-        <!-- Our Story Section -->
-        <section class="bg-gold">
-            <div class="flex flex-col md:flex-row items-center justify-center mx-auto md:container py-20 px-10 gap-10">
-                <div class="flex-1 flex flex-col items-center justify-end">
-                    <h2 class="heading-section text-center mb-4">The Story</h2>
-                    <p class="text-center max-w-lg">In the heart of our community, My Coffee House began as a small coffee shop with big dreams. From sourcing beans ethically to crafting drinks with care, we have grown into a beloved spot for coffee enthusiasts and casual drinkers alike.</p>
-                    <p class="text-center pt-5 max-w-lg">Over the years, our passion for coffee has only deepened. We’ve expanded our menu, embraced innovative brewing methods, and created a space where every guest feels at home. Whether you’re here for a quick pick-me-up or a moment of quiet indulgence, My Coffee House is where connections are brewed and memories are made.</p>
-                </div>
-                <div class="flex-1 flex items-center justify-start">
-                    <img src="images/about-us.jpeg" class="rounded shadow-lg max-w-xs md:max-w-md transition-all transform hover:scale-95" alt="Our story in a picture">
-                </div>
+            <div class="card flex flex-col items-center text-center">
+              <i class="fa fa-seedling fa-3x text-gold mb-3"></i>
+              <h3 class="text-lg mb-2">Sustainability</h3>
+              <p class="max-w-xs">
+                We are committed to eco-friendly practices and reducing our
+                environmental footprint.
+              </p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Meet the Team Section -->
-        <section class="bg-beige">
-            <div class="flex flex-col items-center justify-center mx-auto md:container py-20 px-10">
-                <h2 class="heading-section text-center pb-5">Meet the Team</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-8">
-                    <div class="card flex flex-col items-center text-center">
-                        <img src="images/team-member1.jpg" alt="Team member 1" class="rounded-full mb-3" style="width: 150px; height: 150px;">
-                        <h3 class="text-xl mb-2">Alex Johnson</h3>
-                        <p>Founder & Head Barista</p>
-                    </div>
-                    <div class="card flex flex-col items-center text-center">
-                        <img src="images/team-member2.jpg" alt="Team member 2" class="rounded-full mb-3" style="width: 150px; height: 150px;">
-                        <h3 class="text-xl mb-2">Emily Carter</h3>
-                        <p>Pastry Chef</p>
-                    </div>
-                    <div class="card flex flex-col items-center text-center">
-                        <img src="images/team-member3.jpg" alt="Team member 3" class="rounded-full mb-3" style="width: 150px; height: 150px;">
-                        <h3 class="text-xl mb-2">Ryan Lee</h3>
-                        <p>Operations Manager</p>
-                    </div>
-                </div>
+      <!-- Our Story Section -->
+      <section class="bg-gold">
+        <div
+          class="flex flex-col md:flex-row items-center justify-center mx-auto md:container py-20 px-10 gap-10"
+        >
+          <div class="flex-1 flex flex-col items-center justify-end">
+            <h2 class="heading-section text-center mb-4">The Story</h2>
+            <p class="text-center max-w-lg">
+              In the heart of our community, My Coffee House began as a small
+              coffee shop with big dreams. From sourcing beans ethically to
+              crafting drinks with care, we have grown into a beloved spot for
+              coffee enthusiasts and casual drinkers alike.
+            </p>
+            <p class="text-center pt-5 max-w-lg">
+              Over the years, our passion for coffee has only deepened. We’ve
+              expanded our menu, embraced innovative brewing methods, and
+              created a space where every guest feels at home. Whether you’re
+              here for a quick pick-me-up or a moment of quiet indulgence, My
+              Coffee House is where connections are brewed and memories are
+              made.
+            </p>
+          </div>
+          <div class="flex-1 flex items-center justify-start">
+            <img
+              src="images/about-us.jpeg"
+              class="rounded shadow-lg max-w-xs md:max-w-md transition-all transform hover:scale-95"
+              alt="Our story in a picture"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Meet the Team Section -->
+      <section class="bg-beige">
+        <div
+          class="flex flex-col items-center justify-center mx-auto md:container py-20 px-10"
+        >
+          <h2 class="heading-section text-center pb-5">Meet the Team</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-8">
+            <div class="card flex flex-col items-center text-center">
+              <img
+                src="images/team-member1.jpg"
+                alt="Team member 1"
+                class="rounded-full mb-3"
+                style="width: 150px; height: 150px"
+              />
+              <h3 class="text-xl mb-2">Alex Johnson</h3>
+              <p>Founder & Head Barista</p>
             </div>
-        </section>
-
-        <!-- What Sets Us Apart Section -->
-        <section class="bg-gold">
-            <div class="flex flex-col items-center justify-center mx-auto md:container py-20 px-10">
-                <h2 class="heading-section text-center pb-5">What Sets Us Apart</h2>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-8 justify-items-center">
-                    <div class="card flex flex-col items-center text-center">
-                        <i class="fa fa-coffee fa-3x mb-3 text-gold"></i>
-                        <h3 class="text-lg mb-2">Freshly Roasted Beans</h3>
-                        <p class="max-w-xs">Ethically sourced and freshly roasted coffee beans for every brew.</p>
-                    </div>
-                    <div class="card flex flex-col items-center text-center">
-                        <i class="fa fa-bread-slice fa-3x mb-3 text-gold"></i>
-                        <h3 class="text-lg mb-2">Local Baked Goods</h3>
-                        <p class="max-w-xs">Partnering with local bakers for the freshest treats.</p>
-                    </div>
-                    <div class="card flex flex-col items-center text-center">
-                        <i class="fa fa-home fa-3x mb-3 text-gold"></i>
-                        <h3 class="text-lg mb-2">Ambience</h3>
-                        <p class="max-w-xs">A cozy and inviting space that feels like home.</p>
-                    </div>
-                    <div class="card flex flex-col items-center col-span-1 text-center">
-                        <i class="fa fa-recycle fa-3x mb-3 text-gold"></i>
-                        <h3 class="text-lg mb-2">Sustainability</h3>
-                        <p class="max-w-xs">Dedicated to eco-friendly practices and community support.</p>
-                    </div>
-                    <div class="card flex flex-col items-center text-center">
-                        <i class="fa fa-heart fa-3x mb-3 text-gold"></i>
-                        <h3 class="text-lg mb-2">Customer Care</h3>
-                        <p class="max-w-xs">We go above and beyond to make every guest feel special and valued.</p>
-                    </div>
-                </div>
+            <div class="card flex flex-col items-center text-center">
+              <img
+                src="images/team-member2.jpg"
+                alt="Team member 2"
+                class="rounded-full mb-3"
+                style="width: 150px; height: 150px"
+              />
+              <h3 class="text-xl mb-2">Emily Carter</h3>
+              <p>Pastry Chef</p>
             </div>
-        </section>
+            <div class="card flex flex-col items-center text-center">
+              <img
+                src="images/team-member3.jpg"
+                alt="Team member 3"
+                class="rounded-full mb-3"
+                style="width: 150px; height: 150px"
+              />
+              <h3 class="text-xl mb-2">Ryan Lee</h3>
+              <p>Operations Manager</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What Sets Us Apart Section -->
+      <section class="bg-gold">
+        <div
+          class="flex flex-col items-center justify-center mx-auto md:container py-20 px-10"
+        >
+          <h2 class="heading-section text-center pb-5">What Sets Us Apart</h2>
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-8 justify-items-center"
+          >
+            <div class="card flex flex-col items-center text-center">
+              <i class="fa fa-coffee fa-3x mb-3 text-gold"></i>
+              <h3 class="text-lg mb-2">Freshly Roasted Beans</h3>
+              <p class="max-w-xs">
+                Ethically sourced and freshly roasted coffee beans for every
+                brew.
+              </p>
+            </div>
+            <div class="card flex flex-col items-center text-center">
+              <i class="fa fa-bread-slice fa-3x mb-3 text-gold"></i>
+              <h3 class="text-lg mb-2">Local Baked Goods</h3>
+              <p class="max-w-xs">
+                Partnering with local bakers for the freshest treats.
+              </p>
+            </div>
+            <div class="card flex flex-col items-center text-center">
+              <i class="fa fa-home fa-3x mb-3 text-gold"></i>
+              <h3 class="text-lg mb-2">Ambience</h3>
+              <p class="max-w-xs">
+                A cozy and inviting space that feels like home.
+              </p>
+            </div>
+            <div class="card flex flex-col items-center col-span-1 text-center">
+              <i class="fa fa-recycle fa-3x mb-3 text-gold"></i>
+              <h3 class="text-lg mb-2">Sustainability</h3>
+              <p class="max-w-xs">
+                Dedicated to eco-friendly practices and community support.
+              </p>
+            </div>
+            <div class="card flex flex-col items-center text-center">
+              <i class="fa fa-heart fa-3x mb-3 text-gold"></i>
+              <h3 class="text-lg mb-2">Customer Care</h3>
+              <p class="max-w-xs">
+                We go above and beyond to make every guest feel special and
+                valued.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Scroll to top button -->
-    <button id="scrollToTop" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
-    
+    <button id="scrollToTop" title="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
     <!-- Footer -->
     <footer class="footer bg-cream">
-        <p>&copy; My Coffee House 2025</p>
+      <p>&copy; My Coffee House 2025</p>
     </footer>
 
     <!-- Custom JavaScript -->
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
