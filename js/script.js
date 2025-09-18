@@ -231,7 +231,7 @@ function createMenu(items, sectionId) {
                 <h4 class="font-semibold text-lg mb-1">${item.name}</h4>
                 <p class="text-sm md:max-w-sm mb-2">${item.description || 'No description available.'}</p>
                 <p class="font-bold mb-2">$${item.price.toFixed(2)}</p>
-                <button class="menu-btn mt-auto self-start justify-self-end px-5 py-2 bg-yellow-600 text-white transition-all transform hover:scale-95 hover:bg-yellow-700 rounded-full" data-id="${item.id}">Add to Cart</button>
+                <button class="menu-btn mt-auto self-start justify-self-end px-5 py-2 bg-yellow-600 text-white transition-all transform hover:scale-95 hover:bg-yellow-700 rounded-full" data-id="${item.id}" data-name="${item.name}">Add to Cart</button>
             </div>`;
 
         // add the div to the page
@@ -279,7 +279,7 @@ if (products) {
             const itemId = parseInt(event.target.dataset.id, 10);
             addToCart(itemId);
             // show a message that the item was added to cart
-            notyf.success('Coffee added to cart!');
+            notyf.success(`${event.target.dataset.name} added to cart!`);
         }
     });
 }
