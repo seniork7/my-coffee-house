@@ -81,6 +81,18 @@ body {
     background-position: center;
 }
 
+.menu-card {
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-card:hover {
+    transform: scale(1.05);
+}
+
+.menu-btn {
+    transition: all 0.5s ease-in-out;
+}
+
 /* Contact Banner Image */
 #contact-banner {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url("images/contact-us.jpg") no-repeat;
@@ -179,6 +191,23 @@ h1, h2, h3,
     text-decoration: underline;
 }
 
+.active {
+    color: #a37c4e;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+} */
+
 /* Buttons */
 .btn {
     background: #c6a16e;
@@ -193,17 +222,20 @@ h1, h2, h3,
     text-decoration: none;
 }
 .btn:hover, .btn:focus {
-    background: #a37c4e;
+    /* background: #a37c4e; */
     color: #fffdfa;
+    background-color: #8b5e34; /* darker coffee tone */
+    transform: scale(1.05);
+    transition: all 0.5s ease-in-out;
 }
 
-/* Card/Box */
+/* Card */
 .card {
     background: #fffdfa;
     border-radius: 1rem;
     box-shadow: 0 2px 8px rgba(45,27,14,0.08);
     padding: 2rem;
-    transition: box-shadow 0.2s;
+    transition: all 0.5s ;
 }
 .card:hover {
     box-shadow: 0 4px 16px rgba(45,27,14,0.16);

@@ -26,6 +26,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
 
+    <!-- Notyf -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css"
+    />
+
     <!-- Link CSS file -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -55,7 +61,7 @@
             <ul class="hidden md:flex space-x-6">
               <li><a href="index.html" class="link">Home</a></li>
               <li><a href="about.html" class="link">About</a></li>
-              <li><a href="menu.html" class="link">Menu</a></li>
+              <li><a href="menu.html" class="link active">Menu</a></li>
               <li><a href="blog.html" class="link">Blog</a></li>
               <li><a href="contact.html" class="link">Contact</a></li>
             </ul>
@@ -76,7 +82,7 @@
         <ul id="nav-menu" class="hidden bg-white md:hidden p-4">
           <li><a href="index.html" class="block p-2 link">Home</a></li>
           <li><a href="about.html" class="block p-2 link">About</a></li>
-          <li><a href="menu.html" class="block p-2 link">Menu</a></li>
+          <li><a href="menu.html" class="block p-2 link active">Menu</a></li>
           <li><a href="blog.html" class="block p-2 link">Blog</a></li>
           <li><a href="contact.html" class="block p-2 link">Contact</a></li>
         </ul>
@@ -111,43 +117,45 @@
 
       <div
         id="menuItems"
-        class="flex flex-col items-center justify-center container mx-auto mt-8 p-6"
+        class="fade-in flex flex-col items-center justify-center container mx-auto mt-8 p-6"
       >
         <!-- Menu Options -->
-        <section class="flex flex-col items-center justify-center w-full">
-          <h2 class="heading-section text-center pb-5">Menu Options</h2>
-          <input
-            type="text"
-            id="searchInput"
-            placeholder="Search items…"
-            class="border p-2 mb-4 w-full md:w-1/2 rounded"
-          />
-          <div
-            id="mainMenu"
-            class="grid content-center grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 mt-10 p-6 w-full"
-          ></div>
+        <section>
+          <div class="flex flex-col items-center justify-center w-full">
+            <h2 class="heading-section text-center pb-5">Menu Options</h2>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search items…"
+              class="border p-2 mb-4 w-full md:w-1/2 rounded"
+            />
+            <div
+              id="mainMenu"
+              class="grid content-center grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 mt-10 p-6 w-full"
+            ></div>
+          </div>
         </section>
 
         <!-- Specials and Offers -->
-        <section
-          class="flex flex-col items-center justify-center mt-20 p-6 w-full"
-        >
-          <h2 class="heading-section text-center pb-5">Seasonal Specials</h2>
-          <div
-            id="seasonalSection"
-            class="grid content-center grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 w-full"
-          ></div>
+        <section>
+          <div class="fade-in flex flex-col items-center justify-center mt-20 p-6 w-full">
+            <h2 class="heading-section text-center pb-5">Seasonal Specials</h2>
+            <div
+              id="seasonalSection"
+              class="grid content-center grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 w-full"
+            ></div>
+          </div>
         </section>
 
         <!-- Dietary Section -->
-        <section
-          class="flex flex-col items-center justify-center mt-20 p-6 w-full"
-        >
-          <h2 class="heading-section text-center pb-5">Dietary Options</h2>
-          <div
-            id="dietarySection"
-            class="grid content-center grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 w-full"
-          ></div>
+        <section>
+          <div class="fade-in flex flex-col items-center justify-center py-20 px-10 text-center bg-gold">
+            <h2 class="heading-section text-center pb-5">Dietary Options</h2>
+            <div
+              id="dietarySection"
+              class="grid content-center grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 w-full text-left"
+            ></div>
+          </div>
         </section>
       </div>
     </main>
@@ -160,6 +168,9 @@
     <footer class="footer bg-cream">
       <p>&copy; My Coffee House 2025</p>
     </footer>
+
+    <!-- Notyf -->
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
 
     <!-- Custom JavaScript -->
     <script src="js/script.js"></script>

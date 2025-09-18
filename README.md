@@ -15,8 +15,9 @@ Over time, I have continued to build on and improve this project, restructuring 
 - **HTML5**
 - **CSS3** (Tailwind CSS (https://tailwindcss.com/) for utility first styling)
 - **JavaScript** (for interactivity, navigation, and cart functionality)
-- **Font Awesome** (for icons)
-- **Animate.css** (for subtle animations)
+- **Font Awesome** (for icons (https://fontawesome.com/))
+- **Animate.css** (for subtle animations (https://animate.style/))
+- **Notyf** (for alerts (https://carlosroso.com/notyf/))
 - **Google Fonts** (Montserrat & Playfair for modern typography)
 
 ---

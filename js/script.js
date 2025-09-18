@@ -3,7 +3,7 @@
 // make the hamburger menu functional
 const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
-if(navToggle) {
+if (navToggle) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.toggle('hidden');
     });
@@ -12,44 +12,44 @@ if(navToggle) {
 /********************* CART FUNCTIONALITY ********************/
 // array of objects with menu info
 const menu = [
-    { 
-        id: 1, 
-        name: 'Espresso', 
+    {
+        id: 1,
+        name: 'Espresso',
         price: 3,
         description: 'A bold and concentrated shot of rich coffee with a velvety crema — the foundation of all great brews.',
         image: 'https://images.unsplash.com/photo-1485808191679-5f86510681a2?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     },
-    { 
-        id: 2, 
-        name: 'Latte', 
+    {
+        id: 2,
+        name: 'Latte',
         price: 4,
         description: 'A smooth blend of espresso and steamed milk topped with a light layer of foam — creamy and comforting.',
         image: 'https://images.unsplash.com/photo-1593443320739-77f74939d0da?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     },
-    { 
-        id: 3, 
-        name: 'Cappuccino', 
+    {
+        id: 3,
+        name: 'Cappuccino',
         price: 4.5,
         description: 'Equal parts espresso, steamed milk, and foam for a perfectly balanced and frothy classic.',
         image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     },
-    { 
-        id: 4, 
-        name: 'Cold Brew', 
+    {
+        id: 4,
+        name: 'Cold Brew',
         price: 5,
         description: 'Slow-steeped for 12+ hours, our cold brew is extra smooth, naturally sweet, and refreshingly bold.',
         image: 'https://images.unsplash.com/photo-1531835207745-506a1bc035d8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29sZCUyMGJyZXd8ZW58MHx8MHx8fDA%3D'
     },
-    { 
-        id: 5, 
-        name: 'Mocha', 
+    {
+        id: 5,
+        name: 'Mocha',
         price: 4.75,
         description: 'A chocolate-lover’s dream — espresso mixed with steamed milk and rich cocoa, finished with whipped cream.',
         image: 'https://images.unsplash.com/photo-1596078841242-12f73dc697c6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW9jaGF8ZW58MHx8MHx8fDA%3D'
     },
-    { 
-        id: 6, 
-        name: 'Americano', 
+    {
+        id: 6,
+        name: 'Americano',
         price: 3.5,
         description: 'Hot water poured over espresso for a light yet robust cup that’s less intense but just as flavorful.',
         image: 'https://images.unsplash.com/photo-1551030173-122aabc4489c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
@@ -149,6 +149,12 @@ const dietaryOptions = [
     }
 ];
 
+// initialize Notyf for notifications
+const notyf = new Notyf({
+    duration: 3000,
+    position: { x: 'center', y: 'top' },
+});
+
 // create an array with the menu arrays to perform search
 // ... is used to combine all the items from each array into one
 const allItems = [...menu, ...seasonalSpecials, ...dietaryOptions];
@@ -157,7 +163,7 @@ const allItems = [...menu, ...seasonalSpecials, ...dietaryOptions];
 const products = document.getElementById('menuItems');
 
 
-  // update cart count badge in header based on user cart
+// update cart count badge in header based on user cart
 function updateCartCount() {
     // get the span that shows the number of icons in cart
     const cartCount = document.getElementById('cart-count');
@@ -169,7 +175,7 @@ function updateCartCount() {
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
     // if the number of items is greater than 0, show the count
-    if(totalItems > 0) {
+    if (totalItems > 0) {
         cartCount.classList.remove('hidden');
         cartCount.textContent = totalItems;
 
@@ -213,7 +219,7 @@ function createMenu(items, sectionId) {
         const card = document.createElement('div');
 
         // add classes to the card
-        card.className = 'bg-beige p-4 border rounded search-item flex flex-col overflow-hidden shadow-md';
+        card.className = 'bg-beige p-4 border rounded search-item flex flex-col overflow-hidden shadow-md menu-card';
 
         // add a data- attribute with the name for each item
         card.dataset.name = item.name;
@@ -225,7 +231,7 @@ function createMenu(items, sectionId) {
                 <h4 class="font-semibold text-lg mb-1">${item.name}</h4>
                 <p class="text-sm md:max-w-sm mb-2">${item.description || 'No description available.'}</p>
                 <p class="font-bold mb-2">$${item.price.toFixed(2)}</p>
-                <button class="mt-auto self-start justify-self-end px-5 py-2 bg-yellow-600 text-white transition-all transform hover:scale-95 hover:bg-yellow-700 rounded-full" data-id="${item.id}">Add to Cart</button>
+                <button class="menu-btn mt-auto self-start justify-self-end px-5 py-2 bg-yellow-600 text-white transition-all transform hover:scale-95 hover:bg-yellow-700 rounded-full" data-id="${item.id}">Add to Cart</button>
             </div>`;
 
         // add the div to the page
@@ -240,7 +246,7 @@ function createMenu(items, sectionId) {
 function addToCart(id) {
     // get the cart from local storage
     const cart = loadCart();
-    
+
     // check if item in the cart matches the specified id
     // store that item into a variable
     const userCart = cart.find(item => item.id === id);
@@ -249,7 +255,7 @@ function addToCart(id) {
     if (userCart) {
         userCart.quantity++;
 
-    // if the id does not exist, add that item to the cart
+        // if the id does not exist, add that item to the cart
     } else {
         cart.push({ id, quantity: 1 });
     }
@@ -262,9 +268,9 @@ function addToCart(id) {
 }
 
 // if the id menuItems exist on the page
-if(products) {
+if (products) {
     // add event delegation
-    products.addEventListener('click', event => {
+    products.addEventListener('click', (event) => {
         // if the event target is a button with data-id
         if (event.target.matches('button[data-id]')) {
             // convert the id (string) to a number
@@ -272,6 +278,8 @@ if(products) {
             // use the id as an argument to add the item to the cart
             const itemId = parseInt(event.target.dataset.id, 10);
             addToCart(itemId);
+            // show a message that the item was added to cart
+            notyf.success('Coffee added to cart!');
         }
     });
 }
@@ -284,7 +292,7 @@ function createCheckout() {
     const divElement = document.getElementById('cartItems');
 
     // exit if the element does not exist on the page
-    if (!divElement) return; 
+    if (!divElement) return;
 
     divElement.innerHTML = ''; // Clear previous content
 
@@ -313,7 +321,7 @@ function createCheckout() {
         // create a button to remove item from cart
         div.innerHTML = `
             <span>${item.quantity} ${menuItem.name} = $${(menuItem.price * item.quantity).toFixed(2)}</span>
-            <button class="px-6 py-2 bg-red-500 text-white rounded transition-colors duration-200 hover:bg-red-700 focus:bg-red-700" data-index="${index}">Remove</button>
+            <button class="px-6 py-2 bg-red-500 text-white rounded transition-colors duration-200 hover:bg-red-700 focus:bg-red-700" data-index="${index}" data-name="${menuItem.name}">Remove</button>
         `;
 
         // add the div to the page
@@ -330,7 +338,7 @@ function createCheckout() {
     divElement.insertAdjacentHTML('beforeend', `<p class="font-bold pt-10">Total: $${total.toFixed(2)}</p>`);
 }
 
-/*************************** Make remove button on the checkout page functional **************************/
+/************ Make remove button on the checkout page functional *****************/
 // get the div with the cart items
 const cartList = document.getElementById('cartItems');
 // if the div exist on the page
@@ -347,7 +355,7 @@ if (cartList) {
             const cart = loadCart();
 
             // remove item at specified index
-            cart.splice(index, 1); 
+            cart.splice(index, 1);
 
             // save the updated cart to local storage
             saveCart(cart);
@@ -357,6 +365,9 @@ if (cartList) {
 
             // update the number of items shown on the cart icon
             updateCartCount();
+
+            // show a message that the item was removed from cart
+            notyf.error(`${event.target.dataset.name} removed from cart.`);
         }
     });
 }
@@ -441,7 +452,7 @@ if (goToMenuBtn) {
 /********************* SEARCH FIELD ********************/
 // make the search bar interactive
 // get the input field and store it in a variable
-if(document.getElementById('searchInput')) {
+if (document.getElementById('searchInput')) {
     const searchInput = document.getElementById('searchInput');
 
     // add an event listener so the filter happens as the user types
@@ -460,7 +471,7 @@ if(document.getElementById('searchInput')) {
             if (searchText.includes(searchTerm)) {
                 item.style.display = '';
 
-            // if there is no match the hide the items
+                // if there is no match the hide the items
             } else {
                 item.style.display = 'none';
             }
@@ -479,10 +490,10 @@ const prevBtn = document.getElementById("prev-btn");
 // get the right (next) button
 const nextBtn = document.getElementById("next-btn");
 
-if(carousel) {
+if (carousel) {
     // index will track which slide is currently visible
     let index = 0;
-    
+
     // totalSlides counts how many testimonial items exist inside the carousel
     const totalSlides = carousel.children.length;
 
@@ -500,12 +511,12 @@ if(carousel) {
         //   the "%" (modulus) makes sure that if we pass the last slide,
         //   it loops back to 0 (first slide)
         index = (index + 1) % totalSlides;
-        
+
         // update the position of the carousel
         updateCarousel();
     }
-    
-    
+
+
     // this function move to the carousel to the next slide
     function prevSlide() {
         //   decrease "index" by 1 to move backwards
@@ -528,40 +539,54 @@ if(carousel) {
 
     // add event listeners to buttons
     nextBtn.addEventListener("click", () => {
-        nextSlide();       
-        stopAutoPlay();    
-        startAutoPlay();   
+        nextSlide();
+        stopAutoPlay();
+        startAutoPlay();
     });
-    
+
     prevBtn.addEventListener("click", () => {
-        prevSlide();       
-        stopAutoPlay();    
-        startAutoPlay();   
+        prevSlide();
+        stopAutoPlay();
+        startAutoPlay();
     });
-    
+
     // start the carousel autoplay when the page loads
     startAutoPlay();
 }
 
 // show/hide scroll to top button
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const scrollBtn = document.getElementById('scrollToTop');
     if (window.scrollY > 300) {
-    scrollBtn.classList.add('show');
+        scrollBtn.classList.add('show');
     } else {
-    scrollBtn.classList.remove('show');
+        scrollBtn.classList.remove('show');
     }
 });
 
 // scroll to top on click
-document.getElementById('scrollToTop').addEventListener('click', function() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
+document.getElementById('scrollToTop').addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 // FAQ accordion toggle
 document.querySelectorAll('.faq-toggle').forEach(btn => {
-    btn.addEventListener('click', function() {
+    btn.addEventListener('click', function () {
         const answer = this.nextElementSibling;
         answer.classList.toggle('hidden');
+    });
+});
+
+// add fade in animation on scroll
+const faders = document.querySelectorAll(".fade-in");
+
+window.addEventListener("scroll", () => {
+    faders.forEach(element => {
+        const position = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (position < windowHeight - 50) {
+            element.classList.add("animate__animated", "animate__fadeInUp");
+        }
     });
 });

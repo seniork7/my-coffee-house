@@ -26,7 +26,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
 
-    <!-- Link CSS file -->
+    <!-- Notyf -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css"
+    />
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -50,7 +56,7 @@
           </a>
           <div class="flex gap-20">
             <ul class="hidden md:flex space-x-6">
-              <li><a href="index.html" class="link">Home</a></li>
+              <li><a href="index.html" class="link active">Home</a></li>
               <li><a href="about.html" class="link">About</a></li>
               <li><a href="menu.html" class="link">Menu</a></li>
               <li><a href="blog.html" class="link">Blog</a></li>
@@ -72,7 +78,7 @@
           </div>
         </div>
         <ul id="nav-menu" class="hidden bg-white md:hidden p-4">
-          <li><a href="index.html" class="block p-2 link">Home</a></li>
+          <li><a href="index.html" class="block p-2 link active">Home</a></li>
           <li><a href="about.html" class="block p-2 link">About</a></li>
           <li><a href="menu.html" class="block p-2 link">Menu</a></li>
           <li><a href="blog.html" class="block p-2 link">Blog</a></li>
@@ -109,7 +115,7 @@
       <!-- Welcome Section -->
       <section class="bg-gold">
         <div
-          class="flex flex-col items-center justify-center mx-auto md:container py-20 px-10"
+          class="fade-in flex flex-col items-center justify-center mx-auto md:container py-20 px-10"
         >
           <h2 class="heading-section text-center pb-5">
             A NEW WAY TO TASTE COFFEE
@@ -150,7 +156,7 @@
       <!-- Offers Section -->
       <section class="bg-beige">
         <div
-          class="flex flex-col items-center justify-center md:container mx-auto pt-20 px-10"
+          class="fade-in flex flex-col items-center justify-center md:container mx-auto pt-20 px-10"
         >
           <h2 class="heading-section text-center pb-5">Why visit us?</h2>
 
@@ -206,9 +212,9 @@
       </section>
 
       <!-- Customer Favorites -->
-      <section>
+      <section class="">
         <div
-          class="flex flex-col items-center justify-center md:container mx-auto pt-20 px-10"
+          class="fade-in flex flex-col items-center justify-center md:container mx-auto pt-20 px-10"
         >
           <h2 class="heading-section text-3xl font-bold mb-6 text-center">
             Customer Favorites
@@ -274,9 +280,9 @@
       </section>
 
       <!-- Daily Specials -->
-      <section>
+      <section class="">
         <div
-          class="flex flex-col items-center justify-center md:container mx-auto py-20 px-10"
+          class="fade-in flex flex-col items-center justify-center md:container mx-auto py-20 px-10"
         >
           <h2 class="heading-section text-3xl font-bold mb-6 text-center">
             Daily Specials
@@ -343,7 +349,7 @@
       <!-- Testimonial Section -->
       <section class="bg-gold">
         <div
-          class="flex flex-col items-center justify-center md:container mx-auto py-20 px-5"
+          class="fade-in flex flex-col items-center justify-center md:container mx-auto py-20 px-5"
         >
           <h2 class="heading-section text-center pb-5">
             What our customers say about us
@@ -430,19 +436,21 @@
       </section>
 
       <!-- Call to Action -->
-      <section class="py-20 px-10 text-center">
-        <h2 class="heading-section text-gold mb-4">
-          Join Our Coffee Lovers Club
-        </h2>
-        <p class="mb-6 text-espresso">
-          Get exclusive offers, early menu releases, and a free drink on your
-          birthday!
-        </p>
-        <a
-          href="signup.html"
-          class="btn bg-gold text-espresso hover:bg-gold-dark hover:text-cream"
-          >Sign Up Now</a
-        >
+      <section class="">
+        <div class="fade-in py-20 px-10 text-center">
+          <h2 class="heading-section text-gold mb-4">
+            Join Our Coffee Lovers Club
+          </h2>
+          <p class="mb-6 text-espresso">
+            Get exclusive offers, early menu releases, and a free drink on your
+            birthday!
+          </p>
+          <a
+            href="signup.html"
+            class="btn bg-gold text-espresso hover:bg-gold-dark hover:text-cream"
+            >Sign Up Now</a
+          >
+        </div>
       </section>
     </main>
 
@@ -455,6 +463,9 @@
     <footer class="footer bg-cream">
       <p>&copy; My Coffee House 2025</p>
     </footer>
+
+    <!-- Notyf -->
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
 
     <!-- Custom Script -->
     <script src="js/script.js"></script>
