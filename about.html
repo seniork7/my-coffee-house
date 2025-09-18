@@ -26,7 +26,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
 
-    <!-- Link CSS file -->
+    <!-- Notyf -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css"
+    />
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -54,7 +60,7 @@
           <div class="flex gap-20">
             <ul class="hidden md:flex space-x-6">
               <li><a href="index.html" class="link">Home</a></li>
-              <li><a href="about.html" class="link">About</a></li>
+              <li><a href="about.html" class="link active">About</a></li>
               <li><a href="menu.html" class="link">Menu</a></li>
               <li><a href="blog.html" class="link">Blog</a></li>
               <li><a href="contact.html" class="link">Contact</a></li>
@@ -75,7 +81,7 @@
         </div>
         <ul id="nav-menu" class="hidden bg-white md:hidden p-4">
           <li><a href="index.html" class="block p-2 link">Home</a></li>
-          <li><a href="about.html" class="block p-2 link">About</a></li>
+          <li><a href="about.html" class="block p-2 link active">About</a></li>
           <li><a href="menu.html" class="block p-2 link">Menu</a></li>
           <li><a href="blog.html" class="block p-2 link">Blog</a></li>
           <li><a href="contact.html" class="block p-2 link">Contact</a></li>
@@ -112,7 +118,7 @@
       <!-- Mission Section -->
       <section id="mission" class="bg-gold">
         <div
-          class="flex flex-col items-center justify-center mx-auto md:container py-20 px-10"
+          class="fade-in flex flex-col items-center justify-center mx-auto md:container py-20 px-10"
         >
           <h2 class="heading-section text-center pb-5">Our Mission</h2>
           <p class="text-center max-w-2xl mb-4">
@@ -133,7 +139,7 @@
       <!-- Our Values Section -->
       <section class="bg-beige">
         <div
-          class="flex flex-col items-center justify-center mx-auto md:container py-20 px-10"
+          class="fade-in flex flex-col items-center justify-center mx-auto md:container py-20 px-10"
         >
           <h2 class="heading-section text-center pb-5">Our Values</h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-20">
@@ -167,7 +173,7 @@
       <!-- Our Story Section -->
       <section class="bg-gold">
         <div
-          class="flex flex-col md:flex-row items-center justify-center mx-auto md:container py-20 px-10 gap-10"
+          class="fade-in flex flex-col md:flex-row items-center justify-center mx-auto md:container py-20 px-10 gap-10"
         >
           <div class="flex-1 flex flex-col items-center justify-end">
             <h2 class="heading-section text-center mb-4">The Story</h2>
@@ -199,7 +205,7 @@
       <!-- Meet the Team Section -->
       <section class="bg-beige">
         <div
-          class="flex flex-col items-center justify-center mx-auto md:container py-20 px-10"
+          class="fade-in flex flex-col items-center justify-center mx-auto md:container py-20 px-10"
         >
           <h2 class="heading-section text-center pb-5">Meet the Team</h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-8">
@@ -240,12 +246,12 @@
       <!-- What Sets Us Apart Section -->
       <section class="bg-gold">
         <div
-          class="flex flex-col items-center justify-center mx-auto md:container py-20 px-10"
+          class="fade-in flex flex-col items-center justify-center mx-auto md:container py-20 px-10"
         >
           <h2 class="heading-section text-center pb-5">What Sets Us Apart</h2>
 
           <div
-            class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-8 justify-items-center"
+            class="flex flex-col md:flex-row md:flex-wrap items-center justify-center gap-10 mt-8 md:w-auto"
           >
             <div class="card flex flex-col items-center text-center">
               <i class="fa fa-coffee fa-3x mb-3 text-gold"></i>
@@ -280,8 +286,7 @@
               <i class="fa fa-heart fa-3x mb-3 text-gold"></i>
               <h3 class="text-lg mb-2">Customer Care</h3>
               <p class="max-w-xs">
-                We go above and beyond to make every guest feel special and
-                valued.
+                We go above and beyond to make every guest feels valued.
               </p>
             </div>
           </div>
@@ -298,6 +303,9 @@
     <footer class="footer bg-cream">
       <p>&copy; My Coffee House 2025</p>
     </footer>
+
+    <!-- Notyf -->
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
 
     <!-- Custom JavaScript -->
     <script src="js/script.js"></script>
